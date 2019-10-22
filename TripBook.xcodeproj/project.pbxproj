@@ -3,27 +3,31 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		773618F8235F6EDF00AE271D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 773618F7235F6EDF00AE271D /* AppDelegate.swift */; };
 		773618FA235F6EDF00AE271D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 773618F9235F6EDF00AE271D /* SceneDelegate.swift */; };
-		773618FC235F6EDF00AE271D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 773618FB235F6EDF00AE271D /* ViewController.swift */; };
 		773618FF235F6EDF00AE271D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 773618FD235F6EDF00AE271D /* Main.storyboard */; };
 		77361901235F6EE000AE271D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 77361900235F6EE000AE271D /* Assets.xcassets */; };
 		77361904235F6EE000AE271D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77361902235F6EE000AE271D /* LaunchScreen.storyboard */; };
+		7736190C235F72A100AE271D /* TripListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7736190B235F72A100AE271D /* TripListTableViewController.swift */; };
+		B1EDF778B35BE9DAECEB7BDA /* Pods_TripBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 246DABF25B76C2FC55E38E6A /* Pods_TripBook.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		246DABF25B76C2FC55E38E6A /* Pods_TripBook.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TripBook.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		773618F4235F6EDF00AE271D /* TripBook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TripBook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		773618F7235F6EDF00AE271D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		773618F9235F6EDF00AE271D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		773618FB235F6EDF00AE271D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		773618FE235F6EDF00AE271D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		77361900235F6EE000AE271D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		77361903235F6EE000AE271D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		77361905235F6EE000AE271D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7736190B235F72A100AE271D /* TripListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TripListTableViewController.swift; path = /Users/viktor/Developer/TripBook/TripBook/TripListTableViewController.swift; sourceTree = "<absolute>"; };
+		7F5333B0C2092ED975E3E899 /* Pods-TripBook.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TripBook.release.xcconfig"; path = "Target Support Files/Pods-TripBook/Pods-TripBook.release.xcconfig"; sourceTree = "<group>"; };
+		E65C64B9C3CE5F90A3E71351 /* Pods-TripBook.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TripBook.debug.xcconfig"; path = "Target Support Files/Pods-TripBook/Pods-TripBook.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +35,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B1EDF778B35BE9DAECEB7BDA /* Pods_TripBook.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3AB1C13E440A3DAE0B0D9067 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E65C64B9C3CE5F90A3E71351 /* Pods-TripBook.debug.xcconfig */,
+				7F5333B0C2092ED975E3E899 /* Pods-TripBook.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		4A70BC9B31D8C4A405FC7B94 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				246DABF25B76C2FC55E38E6A /* Pods_TripBook.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		773618EB235F6EDF00AE271D = {
 			isa = PBXGroup;
 			children = (
 				773618F6235F6EDF00AE271D /* TripBook */,
 				773618F5235F6EDF00AE271D /* Products */,
+				3AB1C13E440A3DAE0B0D9067 /* Pods */,
+				4A70BC9B31D8C4A405FC7B94 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,7 +82,7 @@
 			children = (
 				773618F7235F6EDF00AE271D /* AppDelegate.swift */,
 				773618F9235F6EDF00AE271D /* SceneDelegate.swift */,
-				773618FB235F6EDF00AE271D /* ViewController.swift */,
+				7736190B235F72A100AE271D /* TripListTableViewController.swift */,
 				773618FD235F6EDF00AE271D /* Main.storyboard */,
 				77361900235F6EE000AE271D /* Assets.xcassets */,
 				77361902235F6EE000AE271D /* LaunchScreen.storyboard */,
@@ -74,9 +98,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 77361908235F6EE000AE271D /* Build configuration list for PBXNativeTarget "TripBook" */;
 			buildPhases = (
+				B3D1AB4FE29BFD4AD4220175 /* [CP] Check Pods Manifest.lock */,
 				773618F0235F6EDF00AE271D /* Sources */,
 				773618F1235F6EDF00AE271D /* Frameworks */,
 				773618F2235F6EDF00AE271D /* Resources */,
+				2104004C1B5ECE5D3D1BFE2D /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -133,12 +159,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		2104004C1B5ECE5D3D1BFE2D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TripBook/Pods-TripBook-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TripBook/Pods-TripBook-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TripBook/Pods-TripBook-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B3D1AB4FE29BFD4AD4220175 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TripBook-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		773618F0235F6EDF00AE271D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				773618FC235F6EDF00AE271D /* ViewController.swift in Sources */,
+				7736190C235F72A100AE271D /* TripListTableViewController.swift in Sources */,
 				773618F8235F6EDF00AE271D /* AppDelegate.swift in Sources */,
 				773618FA235F6EDF00AE271D /* SceneDelegate.swift in Sources */,
 			);
@@ -282,6 +350,7 @@
 		};
 		77361909235F6EE000AE271D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E65C64B9C3CE5F90A3E71351 /* Pods-TripBook.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -299,6 +368,7 @@
 		};
 		7736190A235F6EE000AE271D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7F5333B0C2092ED975E3E899 /* Pods-TripBook.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
