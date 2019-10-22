@@ -13,6 +13,8 @@
 		77361901235F6EE000AE271D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 77361900235F6EE000AE271D /* Assets.xcassets */; };
 		77361904235F6EE000AE271D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77361902235F6EE000AE271D /* LaunchScreen.storyboard */; };
 		7736190C235F72A100AE271D /* TripListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7736190B235F72A100AE271D /* TripListTableViewController.swift */; };
+		7736190E235F79C100AE271D /* TripListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7736190D235F79C100AE271D /* TripListModel.swift */; };
+		77361910235F7E5E00AE271D /* EventModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7736190F235F7E5E00AE271D /* EventModel.swift */; };
 		B1EDF778B35BE9DAECEB7BDA /* Pods_TripBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 246DABF25B76C2FC55E38E6A /* Pods_TripBook.framework */; };
 /* End PBXBuildFile section */
 
@@ -26,6 +28,8 @@
 		77361903235F6EE000AE271D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		77361905235F6EE000AE271D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7736190B235F72A100AE271D /* TripListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TripListTableViewController.swift; path = /Users/viktor/Developer/TripBook/TripBook/TripListTableViewController.swift; sourceTree = "<absolute>"; };
+		7736190D235F79C100AE271D /* TripListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripListModel.swift; sourceTree = "<group>"; };
+		7736190F235F7E5E00AE271D /* EventModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventModel.swift; sourceTree = "<group>"; };
 		7F5333B0C2092ED975E3E899 /* Pods-TripBook.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TripBook.release.xcconfig"; path = "Target Support Files/Pods-TripBook/Pods-TripBook.release.xcconfig"; sourceTree = "<group>"; };
 		E65C64B9C3CE5F90A3E71351 /* Pods-TripBook.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TripBook.debug.xcconfig"; path = "Target Support Files/Pods-TripBook/Pods-TripBook.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -82,6 +86,8 @@
 			children = (
 				773618F7235F6EDF00AE271D /* AppDelegate.swift */,
 				773618F9235F6EDF00AE271D /* SceneDelegate.swift */,
+				7736190D235F79C100AE271D /* TripListModel.swift */,
+				7736190F235F7E5E00AE271D /* EventModel.swift */,
 				7736190B235F72A100AE271D /* TripListTableViewController.swift */,
 				773618FD235F6EDF00AE271D /* Main.storyboard */,
 				77361900235F6EE000AE271D /* Assets.xcassets */,
@@ -208,6 +214,8 @@
 			files = (
 				7736190C235F72A100AE271D /* TripListTableViewController.swift in Sources */,
 				773618F8235F6EDF00AE271D /* AppDelegate.swift in Sources */,
+				7736190E235F79C100AE271D /* TripListModel.swift in Sources */,
+				77361910235F7E5E00AE271D /* EventModel.swift in Sources */,
 				773618FA235F6EDF00AE271D /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
