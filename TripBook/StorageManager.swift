@@ -12,7 +12,7 @@ let realm = try! Realm()
 
 class StorageManager {
     
-    static func addTrip(_ trip: Trip) {
+    static func saveTrip(_ trip: Trip) {
         try! realm.write {
             realm.add(trip)
         }
@@ -29,23 +29,5 @@ class StorageManager {
            
         }
     }
-    
-//    static func addEvent(_ event: Event) {
-//          try! realm.write {
-//            realm.add(event)
-//          }
-//      }
-//
-//      static func removeEvent(_ event: Event) {
-//          try! realm.write {
-//              realm.delete(event)
-//          }
-//      }
-//
-//      static func editEvent(_ event: Event, _ newEvent: Event) {
-//          try! realm.write {
-//
-//          }
-//      }
 }
 
