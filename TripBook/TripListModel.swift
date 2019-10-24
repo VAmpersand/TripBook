@@ -8,7 +8,7 @@
 
 import RealmSwift
 
-class TripList: Object {
+class Trip: Object {
     
     @objc dynamic var tripName = "Trip name"
     @objc dynamic var startTrip = Date()
