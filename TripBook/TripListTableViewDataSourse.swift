@@ -10,18 +10,23 @@ import UIKit
 
 extension TripListTableViewController {
     
-    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return trips.count
+        return testTripList.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellID, for: indexPath)
         
         
-        let trip = trips[indexPath.row]
+        let trip = testTripList[indexPath.row]
         cell.textLabel?.text = trip.tripName
         cell.detailTextLabel?.text = trip.startTrip + " - " + trip.endTrip
+        
+        if testTripList[indexPath.row].tripCompleted == false {
+            cell.imageView?.image = UIImage(named: "notDone")
+            cell.imageView?.frame.size = CGSize(width: 10, height: 10)
+        }
+        
         return cell
     }
     

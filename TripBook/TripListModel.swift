@@ -13,6 +13,7 @@ class Trip: Object {
     @objc dynamic var tripName = "Trip name"
     @objc dynamic var startTrip = "Date" // Add correct data format
     @objc dynamic var endTrip = "Date" // Add correct data format
-    let events = List<Event>() 
+    let events = List<Event>()
+    @objc dynamic var tripCompleted = false
 }
 
