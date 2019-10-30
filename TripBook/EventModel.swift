@@ -10,10 +10,11 @@ import RealmSwift
 
 class Event: Object {
     
+    @objc dynamic var eventType = "Event type" // Add correct data format(Mb Enum ?! reservationApartment, reservationHotelRoom, departure, transfer )
+      
     @objc dynamic var eventName = "Event name"
     @objc dynamic var eventDescription = "Description of event"
-    @objc dynamic var eventType = "Event type" // Add correct data format(Mb Enum ?! reservationApartment, reservationHotelRoom, departure, transfer )
-    
+  
     @objc dynamic var countryName = "Country of destination"
     @objc dynamic var cityName = "City of destination"
     @objc dynamic var streetName = "Street of destination"
