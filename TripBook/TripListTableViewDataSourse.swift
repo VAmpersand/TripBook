@@ -22,16 +22,17 @@ extension TripListTableViewController {
         cell.textLabel?.text = trip.tripName
         cell.detailTextLabel?.text = trip.startTrip + " - " + trip.endTrip
         
-        if testTripList[indexPath.row].tripCompleted == false {
+        if testTripList[indexPath.row].tripCompleted {
+            cell.imageView?.image = UIImage(named: "done")
+        } else {
             cell.imageView?.image = UIImage(named: "notDone")
-            cell.imageView?.frame.size = CGSize(width: 10, height: 10)
         }
         
         return cell
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        60
+        66
     }
     
     
@@ -50,9 +51,9 @@ extension TripListTableViewController {
     
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let detailVC = segue.destination as! TripTableViewController
+        let tripVC = segue.destination as! TripTableViewController
         if let indexPath = tableView.indexPathForSelectedRow {
-            
+            tripVC.trip = testTripList[indexPath.row]
         }
     }
 }

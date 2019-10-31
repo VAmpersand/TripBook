@@ -17,8 +17,9 @@
 		77361910235F7E5E00AE271D /* EventModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7736190F235F7E5E00AE271D /* EventModel.swift */; };
 		7736191223621DCA00AE271D /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7736191123621DCA00AE271D /* StorageManager.swift */; };
 		773619142362359E00AE271D /* TripListTableViewDataSourse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 773619132362359E00AE271D /* TripListTableViewDataSourse.swift */; };
-		773619162362373400AE271D /* TripTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 773619152362373400AE271D /* TripTableViewController.swift */; };
 		7761A58D236A05AF0067C209 /* NavigationBarDisign.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7761A58C236A05AF0067C209 /* NavigationBarDisign.swift */; };
+		7761A58F236B780C0067C209 /* AddTripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7761A58E236B780C0067C209 /* AddTripViewController.swift */; };
+		7761A591236B80900067C209 /* TripTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7761A590236B80900067C209 /* TripTableViewController.swift */; };
 		B1EDF778B35BE9DAECEB7BDA /* Pods_TripBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 246DABF25B76C2FC55E38E6A /* Pods_TripBook.framework */; };
 /* End PBXBuildFile section */
 
@@ -36,8 +37,9 @@
 		7736190F235F7E5E00AE271D /* EventModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventModel.swift; sourceTree = "<group>"; };
 		7736191123621DCA00AE271D /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
 		773619132362359E00AE271D /* TripListTableViewDataSourse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripListTableViewDataSourse.swift; sourceTree = "<group>"; };
-		773619152362373400AE271D /* TripTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripTableViewController.swift; sourceTree = "<group>"; };
 		7761A58C236A05AF0067C209 /* NavigationBarDisign.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarDisign.swift; sourceTree = "<group>"; };
+		7761A58E236B780C0067C209 /* AddTripViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTripViewController.swift; sourceTree = "<group>"; };
+		7761A590236B80900067C209 /* TripTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripTableViewController.swift; sourceTree = "<group>"; };
 		7F5333B0C2092ED975E3E899 /* Pods-TripBook.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TripBook.release.xcconfig"; path = "Target Support Files/Pods-TripBook/Pods-TripBook.release.xcconfig"; sourceTree = "<group>"; };
 		E65C64B9C3CE5F90A3E71351 /* Pods-TripBook.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TripBook.debug.xcconfig"; path = "Target Support Files/Pods-TripBook/Pods-TripBook.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -99,9 +101,10 @@
 				7736191123621DCA00AE271D /* StorageManager.swift */,
 				7736190B235F72A100AE271D /* TripListTableViewController.swift */,
 				773619132362359E00AE271D /* TripListTableViewDataSourse.swift */,
-				773619152362373400AE271D /* TripTableViewController.swift */,
-				773618FD235F6EDF00AE271D /* Main.storyboard */,
+				7761A590236B80900067C209 /* TripTableViewController.swift */,
+				7761A58E236B780C0067C209 /* AddTripViewController.swift */,
 				7761A58C236A05AF0067C209 /* NavigationBarDisign.swift */,
+				773618FD235F6EDF00AE271D /* Main.storyboard */,
 				77361900235F6EE000AE271D /* Assets.xcassets */,
 				77361902235F6EE000AE271D /* LaunchScreen.storyboard */,
 				77361905235F6EE000AE271D /* Info.plist */,
@@ -224,13 +227,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7761A591236B80900067C209 /* TripTableViewController.swift in Sources */,
 				7736190C235F72A100AE271D /* TripListTableViewController.swift in Sources */,
 				773618F8235F6EDF00AE271D /* AppDelegate.swift in Sources */,
 				7736190E235F79C100AE271D /* TripListModel.swift in Sources */,
+				7761A58F236B780C0067C209 /* AddTripViewController.swift in Sources */,
 				773619142362359E00AE271D /* TripListTableViewDataSourse.swift in Sources */,
 				7736191223621DCA00AE271D /* StorageManager.swift in Sources */,
 				77361910235F7E5E00AE271D /* EventModel.swift in Sources */,
-				773619162362373400AE271D /* TripTableViewController.swift in Sources */,
 				773618FA235F6EDF00AE271D /* SceneDelegate.swift in Sources */,
 				7761A58D236A05AF0067C209 /* NavigationBarDisign.swift in Sources */,
 			);
