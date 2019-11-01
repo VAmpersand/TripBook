@@ -21,6 +21,7 @@
 		7761A58F236B780C0067C209 /* AddTripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7761A58E236B780C0067C209 /* AddTripViewController.swift */; };
 		7761A591236B80900067C209 /* TripTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7761A590236B80900067C209 /* TripTableViewController.swift */; };
 		7761A593236C29C90067C209 /* TripNavigationBarDesign.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7761A592236C29C90067C209 /* TripNavigationBarDesign.swift */; };
+		7761A595236C322D0067C209 /* ImageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7761A594236C322D0067C209 /* ImageManager.swift */; };
 		B1EDF778B35BE9DAECEB7BDA /* Pods_TripBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 246DABF25B76C2FC55E38E6A /* Pods_TripBook.framework */; };
 /* End PBXBuildFile section */
 
@@ -42,6 +43,7 @@
 		7761A58E236B780C0067C209 /* AddTripViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTripViewController.swift; sourceTree = "<group>"; };
 		7761A590236B80900067C209 /* TripTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripTableViewController.swift; sourceTree = "<group>"; };
 		7761A592236C29C90067C209 /* TripNavigationBarDesign.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripNavigationBarDesign.swift; sourceTree = "<group>"; };
+		7761A594236C322D0067C209 /* ImageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageManager.swift; sourceTree = "<group>"; };
 		7F5333B0C2092ED975E3E899 /* Pods-TripBook.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TripBook.release.xcconfig"; path = "Target Support Files/Pods-TripBook/Pods-TripBook.release.xcconfig"; sourceTree = "<group>"; };
 		E65C64B9C3CE5F90A3E71351 /* Pods-TripBook.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TripBook.debug.xcconfig"; path = "Target Support Files/Pods-TripBook/Pods-TripBook.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -98,14 +100,11 @@
 			children = (
 				773618F7235F6EDF00AE271D /* AppDelegate.swift */,
 				773618F9235F6EDF00AE271D /* SceneDelegate.swift */,
-				7736190D235F79C100AE271D /* TripListModel.swift */,
-				7736190F235F7E5E00AE271D /* EventModel.swift */,
+				7761A598236C36130067C209 /* Models */,
 				7736191123621DCA00AE271D /* StorageManager.swift */,
-				7736190B235F72A100AE271D /* TripListTableViewController.swift */,
-				773619132362359E00AE271D /* TripListTableViewDataSourse.swift */,
-				7761A58C236A05AF0067C209 /* TripListNavigationBarDesign.swift */,
-				7761A590236B80900067C209 /* TripTableViewController.swift */,
-				7761A592236C29C90067C209 /* TripNavigationBarDesign.swift */,
+				7761A594236C322D0067C209 /* ImageManager.swift */,
+				7761A596236C35E80067C209 /* TripList */,
+				7761A597236C35F60067C209 /* DetaleTrip */,
 				7761A58E236B780C0067C209 /* AddTripViewController.swift */,
 				773618FD235F6EDF00AE271D /* Main.storyboard */,
 				77361900235F6EE000AE271D /* Assets.xcassets */,
@@ -113,6 +112,34 @@
 				77361905235F6EE000AE271D /* Info.plist */,
 			);
 			path = TripBook;
+			sourceTree = "<group>";
+		};
+		7761A596236C35E80067C209 /* TripList */ = {
+			isa = PBXGroup;
+			children = (
+				7736190B235F72A100AE271D /* TripListTableViewController.swift */,
+				773619132362359E00AE271D /* TripListTableViewDataSourse.swift */,
+				7761A58C236A05AF0067C209 /* TripListNavigationBarDesign.swift */,
+			);
+			path = TripList;
+			sourceTree = "<group>";
+		};
+		7761A597236C35F60067C209 /* DetaleTrip */ = {
+			isa = PBXGroup;
+			children = (
+				7761A590236B80900067C209 /* TripTableViewController.swift */,
+				7761A592236C29C90067C209 /* TripNavigationBarDesign.swift */,
+			);
+			path = DetaleTrip;
+			sourceTree = "<group>";
+		};
+		7761A598236C36130067C209 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				7736190D235F79C100AE271D /* TripListModel.swift */,
+				7736190F235F7E5E00AE271D /* EventModel.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -236,6 +263,7 @@
 				773618F8235F6EDF00AE271D /* AppDelegate.swift in Sources */,
 				7736190E235F79C100AE271D /* TripListModel.swift in Sources */,
 				7761A58F236B780C0067C209 /* AddTripViewController.swift in Sources */,
+				7761A595236C322D0067C209 /* ImageManager.swift in Sources */,
 				773619142362359E00AE271D /* TripListTableViewDataSourse.swift in Sources */,
 				7736191223621DCA00AE271D /* StorageManager.swift in Sources */,
 				77361910235F7E5E00AE271D /* EventModel.swift in Sources */,

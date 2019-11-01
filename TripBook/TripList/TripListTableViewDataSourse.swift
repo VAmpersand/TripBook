@@ -22,11 +22,8 @@ extension TripListTableViewController {
         cell.textLabel?.text = trip.tripName
         cell.detailTextLabel?.text = trip.startTrip + " - " + trip.endTrip
         
-        if testTripList[indexPath.row].tripCompleted {
-            cell.imageView?.image = UIImage(named: "done")
-        } else {
-            cell.imageView?.image = UIImage(named: "notDone")
-        }
+        let image = ImageManager.setImage(tripComleted: trip.tripCompleted)
+        cell.imageView?.image = image
         
         return cell
     }
@@ -61,11 +58,11 @@ extension TripListTableViewController {
     //}
     
     
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        let tripVC = segue.destination as! TripTableViewController
-//        if let indexPath = tableView.indexPathForSelectedRow {
-//            tripVC.trip = testTripList[indexPath.row]
-//        }
-//    }
+    //    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    //        let tripVC = segue.destination as! TripTableViewController
+    //        if let indexPath = tableView.indexPathForSelectedRow {
+    //            tripVC.trip = testTripList[indexPath.row]
+    //        }
+    //    }
     
 }
