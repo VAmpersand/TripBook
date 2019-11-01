@@ -43,9 +43,6 @@
                                         </imageView>
                                     </subviews>
                                 </tableViewCellContentView>
-                                <connections>
-                                    <segue destination="9Bh-yM-FL6" kind="show" id="CKI-zX-EMP"/>
-                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -54,6 +51,10 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="bfK-rE-2rc"/>
+                    <connections>
+                        <segue destination="jxs-If-TDE" kind="show" identifier="segueToAddEventVC" id="GZy-SY-Z98"/>
+                        <segue destination="9Bh-yM-FL6" kind="show" identifier="segueToTripVC" id="orQ-rA-wDf"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wyk-vt-LU5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -108,7 +109,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Reb-6l-pSh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1736" y="648"/>
+            <point key="canvasLocation" x="1736" y="680"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="nVH-8q-wkq">

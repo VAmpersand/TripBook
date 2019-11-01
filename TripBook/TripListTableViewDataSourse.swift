@@ -36,6 +36,17 @@ extension TripListTableViewController {
     }
     
     
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let trip = testTripList[indexPath.row]
+        
+        if trip.events.isEmpty {
+            performSegue(withIdentifier: "segueToAddEventVC", sender: self)
+        } else {
+            performSegue(withIdentifier: "segueToTripVC", sender: self)
+        }
+    }
+    
     //Добавление кнопки редактирования и удаления при свайпе по ячейке
     
     //override func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
@@ -50,10 +61,11 @@ extension TripListTableViewController {
     //}
     
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let tripVC = segue.destination as! TripTableViewController
-        if let indexPath = tableView.indexPathForSelectedRow {
-            tripVC.trip = testTripList[indexPath.row]
-        }
-    }
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        let tripVC = segue.destination as! TripTableViewController
+//        if let indexPath = tableView.indexPathForSelectedRow {
+//            tripVC.trip = testTripList[indexPath.row]
+//        }
+//    }
+    
 }

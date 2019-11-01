@@ -16,10 +16,11 @@ class TripListTableViewController: UITableViewController {
     var trips: Results<Trip>!
     
     // Test
-    let testTripList = [Trip(), Trip(), Trip()]
-    @objc func testAddFunc() {
-              print("Add trip")
-          }
+    var testTripList = [Trip(), Trip(), Trip()]
+    
+    @objc func testAddTripFunc() {
+        print("Add trip")
+    }
     //
     
     

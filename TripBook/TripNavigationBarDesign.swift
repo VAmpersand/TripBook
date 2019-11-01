@@ -1,14 +1,14 @@
 //
-//  NavigationBarDisign.swift
+//  TripNavigationBarDesign.swift
 //  TripBook
 //
-//  Created by Viktor on 30.10.2019.
+//  Created by Viktor on 01.11.2019.
 //  Copyright © 2019 Viktor. All rights reserved.
 //
 
 import UIKit
 
-extension TripListTableViewController {
+extension TripTableViewController {
     
     func setupView() {
         view.backgroundColor = .white
@@ -17,7 +17,7 @@ extension TripListTableViewController {
     
     func setupNavigationBar() {
         
-        title = "Trip Book"
+//        title = trip.tripName
         
         navigationController?.navigationBar.largeTitleTextAttributes = [.foregroundColor: UIColor.black]
         navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.black]
@@ -29,13 +29,10 @@ extension TripListTableViewController {
             title: "Add",
             style: .plain,
             target: self,
-            action: #selector(testAddFunc)
+            action: #selector(testAddEventFunc)
         )
         
         navigationController?.navigationBar.tintColor = .black
     }
-    
-    
-   
-   
 }
+

@@ -9,13 +9,19 @@
 import UIKit
 
 class TripTableViewController: UITableViewController {
-
+    
     var trip: Trip!
+    
+    // Test
+    @objc func testAddEventFunc() {
+        print("Add event")
+    }
+    //
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        title = trip.tripName
+        
+        setupNavigationBar()
         
     }
     
