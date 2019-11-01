@@ -52,7 +52,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" id="bfK-rE-2rc"/>
                     <connections>
-                        <segue destination="jxs-If-TDE" kind="show" identifier="segueToAddEventVC" id="GZy-SY-Z98"/>
+                        <segue destination="jxs-If-TDE" kind="show" identifier="segueToVCFirstEventAdding" id="GZy-SY-Z98"/>
                         <segue destination="9Bh-yM-FL6" kind="show" identifier="segueToTripVC" id="orQ-rA-wDf"/>
                     </connections>
                 </tableViewController>
@@ -84,6 +84,9 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="mqb-Bu-oPU"/>
+                    <connections>
+                        <segue destination="jxs-If-TDE" kind="show" identifier="segueToVCEventAdding" id="ZMu-PN-P3o"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9pZ-cA-15t" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -130,4 +133,7 @@
             <point key="canvasLocation" x="119" y="-18"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="ZMu-PN-P3o"/>
+    </inferredMetricsTieBreakers>
 </document>

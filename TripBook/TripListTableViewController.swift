@@ -21,12 +21,20 @@ class TripListTableViewController: UITableViewController {
     @objc func testAddTripFunc() {
         print("Add trip")
     }
+    let event = Event()
+    var trip = Trip()
+    
+    func addEvent(){
+        trip.events.append(event)
+        testTripList.append(trip)
+    }
+    
     //
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        addEvent()
         setupView()
         
     }

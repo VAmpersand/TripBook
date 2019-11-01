@@ -17,7 +17,7 @@ extension TripTableViewController {
     
     func setupNavigationBar() {
         
-//        title = trip.tripName
+        title = trip.tripName
         
         navigationController?.navigationBar.largeTitleTextAttributes = [.foregroundColor: UIColor.black]
         navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.black]
@@ -29,7 +29,7 @@ extension TripTableViewController {
             title: "Add",
             style: .plain,
             target: self,
-            action: #selector(testAddEventFunc)
+            action: #selector(addingEvent)
         )
         
         navigationController?.navigationBar.tintColor = .black

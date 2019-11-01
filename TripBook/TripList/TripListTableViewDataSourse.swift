@@ -17,7 +17,6 @@ extension TripListTableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellID, for: indexPath)
         
-        
         let trip = testTripList[indexPath.row]
         cell.textLabel?.text = trip.tripName
         cell.detailTextLabel?.text = trip.startTrip + " - " + trip.endTrip
@@ -32,15 +31,24 @@ extension TripListTableViewController {
         66
     }
     
-    
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         let trip = testTripList[indexPath.row]
         
         if trip.events.isEmpty {
-            performSegue(withIdentifier: "segueToAddEventVC", sender: self)
+            performSegue(withIdentifier: "segueToVCFirstEventAdding", sender: self)
         } else {
             performSegue(withIdentifier: "segueToTripVC", sender: self)
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+       
+        if segue.identifier == "segueToTripVC" {
+            let tripVC = segue.destination as! TripTableViewController
+            if let indexPath = tableView.indexPathForSelectedRow {
+                tripVC.trip = testTripList[indexPath.row]
+            }
         }
     }
     
@@ -56,13 +64,5 @@ extension TripListTableViewController {
     //
     //    return UISwipeActionsConfiguration(actions: [delete, editing])
     //}
-    
-    
-    //    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-    //        let tripVC = segue.destination as! TripTableViewController
-    //        if let indexPath = tableView.indexPathForSelectedRow {
-    //            tripVC.trip = testTripList[indexPath.row]
-    //        }
-    //    }
     
 }

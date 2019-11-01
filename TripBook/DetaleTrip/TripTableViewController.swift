@@ -12,31 +12,16 @@ class TripTableViewController: UITableViewController {
     
     var trip: Trip!
     
-    // Test
-    @objc func testAddEventFunc() {
-        print("Add event")
-    }
-    //
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setupNavigationBar()
         
     }
-    
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return trip.events.count
-    }
-    
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+
+    @objc func addingEvent() {
+        print("Add event")
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "eventCell", for: indexPath)
-        
-        let events = trip.events
-        
-        cell.textLabel?.text = events[indexPath.row].eventName
-        
-        return cell
+        performSegue(withIdentifier: "segueToVCEventAdding", sender: self)
     }
 }
