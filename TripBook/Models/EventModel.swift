@@ -36,6 +36,7 @@ class Event: Object {
     @objc dynamic var numberOfDeperture = "Number of departure: URL request" // Add correct data format
     @objc dynamic var path = "JSON data: Gate, platform, pier: URL request" // Add correct data format
     
+    @objc dynamic var eventCompleted = false
 }
 
 class Notification: Object {

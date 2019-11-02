@@ -21,7 +21,7 @@ extension TripListTableViewController {
         cell.textLabel?.text = trip.tripName
         cell.detailTextLabel?.text = trip.startTrip + " - " + trip.endTrip
         
-        let image = ImageManager.setImage(tripComleted: trip.tripCompleted)
+        let image = ImageManager.setTripImage(tripComleted: trip.tripCompleted)
         cell.imageView?.image = image
         
         return cell

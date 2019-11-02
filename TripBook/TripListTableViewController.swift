@@ -26,6 +26,9 @@ class TripListTableViewController: UITableViewController {
     
     func addEvent(){
         trip.events.append(event)
+        trip.events.append(event)
+        trip.events.append(event)
+        trip.events.append(event)
         testTripList.append(trip)
     }
     

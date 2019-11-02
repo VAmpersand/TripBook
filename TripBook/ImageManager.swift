@@ -11,7 +11,7 @@ import UIKit
 class ImageManager: UIViewController {
     
     
-    static func setImage(tripComleted: Bool) -> UIImage{
+    static func setTripImage(tripComleted: Bool) -> UIImage{
         
         var image: UIImage!
         
@@ -22,4 +22,41 @@ class ImageManager: UIViewController {
         }
         return image
     }
+    
+    static func setEventImage(eventComleted: Bool) -> UIImage{
+           
+           var image: UIImage!
+           
+           if eventComleted {
+               image = UIImage(named: "eventDone")
+           } else {
+               image = UIImage(named: "eventNotDone")
+           }
+           return image
+       }
+    
+    static func setFirstEventImage(eventComleted: Bool) -> UIImage{
+        
+        var image: UIImage!
+        
+        if eventComleted {
+            image = UIImage(named: "firstEventDone")
+        } else {
+            image = UIImage(named: "firstEventNotDone")
+        }
+        return image
+    }
+    
+    static func setLastEventImage(eventComleted: Bool) -> UIImage{
+        
+        var image: UIImage!
+        
+        if eventComleted {
+            image = UIImage(named: "LastEventDone")
+        } else {
+            image = UIImage(named: "LastEventNotDone")
+        }
+        return image
+    }
+    
 }

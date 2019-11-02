@@ -22,7 +22,14 @@ extension TripTableViewController {
         
         cell.textLabel?.text = events[indexPath.row].eventName
         
+        let image = ImageManager.setEventImage(eventComleted: events[indexPath.row].eventCompleted)
+        cell.imageView?.image = image
+        
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        66
     }
 }
 
