@@ -8,9 +8,8 @@
 import UIKit
 import RealmSwift
 
-class TripListTableViewController: UITableViewController {
-    
-    
+class TripListTableViewController: UITableViewController, UIPickerViewDelegate, UIPickerViewDataSource {
+
     let cellID = "cell"
     
     var trips: Results<Trip>!
