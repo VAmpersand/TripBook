@@ -25,6 +25,7 @@
 		7761A59A236CC46D0067C209 /* TripTableViewDataSourse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7761A599236CC46D0067C209 /* TripTableViewDataSourse.swift */; };
 		7761A59E236F0D250067C209 /* AddEventPickerViewDataSourse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7761A59D236F0D250067C209 /* AddEventPickerViewDataSourse.swift */; };
 		7761A5A0236F10DD0067C209 /* EventTypeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7761A59F236F10DD0067C209 /* EventTypeModel.swift */; };
+		7761A5A3236F168C0067C209 /* AddTripAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7761A5A2236F168C0067C209 /* AddTripAlert.swift */; };
 		B1EDF778B35BE9DAECEB7BDA /* Pods_TripBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 246DABF25B76C2FC55E38E6A /* Pods_TripBook.framework */; };
 /* End PBXBuildFile section */
 
@@ -50,6 +51,7 @@
 		7761A599236CC46D0067C209 /* TripTableViewDataSourse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripTableViewDataSourse.swift; sourceTree = "<group>"; };
 		7761A59D236F0D250067C209 /* AddEventPickerViewDataSourse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEventPickerViewDataSourse.swift; sourceTree = "<group>"; };
 		7761A59F236F10DD0067C209 /* EventTypeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = EventTypeModel.swift; path = /Users/viktor/Developer/TripBook/TripBook/Models/EventTypeModel.swift; sourceTree = "<absolute>"; };
+		7761A5A2236F168C0067C209 /* AddTripAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTripAlert.swift; sourceTree = "<group>"; };
 		7F5333B0C2092ED975E3E899 /* Pods-TripBook.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TripBook.release.xcconfig"; path = "Target Support Files/Pods-TripBook/Pods-TripBook.release.xcconfig"; sourceTree = "<group>"; };
 		E65C64B9C3CE5F90A3E71351 /* Pods-TripBook.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TripBook.debug.xcconfig"; path = "Target Support Files/Pods-TripBook/Pods-TripBook.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -111,6 +113,7 @@
 				7761A598236C36130067C209 /* Models */,
 				7761A596236C35E80067C209 /* TripList */,
 				7761A597236C35F60067C209 /* Trip */,
+				7761A5A4236F1A650067C209 /* AddTrip */,
 				7761A5A1236F14920067C209 /* AddEvent */,
 				773618FD235F6EDF00AE271D /* Main.storyboard */,
 				77361900235F6EE000AE271D /* Assets.xcassets */,
@@ -157,6 +160,14 @@
 				7761A59D236F0D250067C209 /* AddEventPickerViewDataSourse.swift */,
 			);
 			path = AddEvent;
+			sourceTree = "<group>";
+		};
+		7761A5A4236F1A650067C209 /* AddTrip */ = {
+			isa = PBXGroup;
+			children = (
+				7761A5A2236F168C0067C209 /* AddTripAlert.swift */,
+			);
+			path = AddTrip;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -287,6 +298,7 @@
 				7736191223621DCA00AE271D /* StorageManager.swift in Sources */,
 				77361910235F7E5E00AE271D /* EventModel.swift in Sources */,
 				7761A59A236CC46D0067C209 /* TripTableViewDataSourse.swift in Sources */,
+				7761A5A3236F168C0067C209 /* AddTripAlert.swift in Sources */,
 				773618FA235F6EDF00AE271D /* SceneDelegate.swift in Sources */,
 				7761A58D236A05AF0067C209 /* TripListNavigationBarDesign.swift in Sources */,
 			);

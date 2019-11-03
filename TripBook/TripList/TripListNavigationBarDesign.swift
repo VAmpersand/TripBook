@@ -29,7 +29,7 @@ extension TripListTableViewController {
             title: "Add",
             style: .plain,
             target: self,
-            action: #selector(testAddTripFunc)
+            action: #selector(addTripFunc)
         )
         
         navigationController?.navigationBar.tintColor = .black

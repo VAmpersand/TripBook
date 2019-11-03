@@ -18,9 +18,8 @@ class TripListTableViewController: UITableViewController {
     // Test
     var testTripList = [Trip(), Trip(), Trip()]
     
-    @objc func testAddTripFunc() {
-        print("Add trip")
-    }
+   
+    
     let event = Event()
     var trip = Trip()
     
