@@ -10,7 +10,6 @@ import UIKit
 
 class ImageManager: UIViewController {
     
-    
     static func setTripImage(tripComleted: Bool) -> UIImage{
         
         var image: UIImage!
@@ -23,7 +22,7 @@ class ImageManager: UIViewController {
         return image
     }
     
-    static func setEventImage(eventComleted: Bool) -> UIImage{
+    static func setUsualEventImage(eventComleted: Bool) -> UIImage{
            
            var image: UIImage!
            
@@ -52,9 +51,9 @@ class ImageManager: UIViewController {
         var image: UIImage!
         
         if eventComleted {
-            image = UIImage(named: "LastEventDone")
+            image = UIImage(named: "lastEventDone")
         } else {
-            image = UIImage(named: "LastEventNotDone")
+            image = UIImage(named: "lastEventNotDone")
         }
         return image
     }

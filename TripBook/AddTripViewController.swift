@@ -8,12 +8,19 @@
 
 import UIKit
 
-class AddTripViewController: UIViewController {
-
+class AddTripViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
+    
+    @IBOutlet weak var choosingEventTipe: UIPickerView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        choosingEventTipe.delegate = self
+        choosingEventTipe.dataSource = self
+        
+        
     }
 
 }
+    
+

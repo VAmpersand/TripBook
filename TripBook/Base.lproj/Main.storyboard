@@ -69,12 +69,28 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="eventCell" id="hl9-Y4-ZZw">
-                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="eventCell" textLabel="Cs7-Tt-87a" detailTextLabel="Nqb-ct-G0r" style="IBUITableViewCellStyleSubtitle" id="hl9-Y4-ZZw">
+                                <rect key="frame" x="0.0" y="28" width="414" height="61.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="hl9-Y4-ZZw" id="qdO-Cb-R3K">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="61.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Cs7-Tt-87a">
+                                            <rect key="frame" x="20" y="8" width="37.5" height="21.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue-BoldItalic" family="Helvetica Neue" pointSize="18"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Nqb-ct-G0r">
+                                            <rect key="frame" x="20" y="32.5" width="46.5" height="18"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue-ThinItalic" family="Helvetica Neue" pointSize="15"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
                                 </tableViewCellContentView>
                             </tableViewCell>
                         </prototypes>
@@ -100,15 +116,26 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wVR-Zc-GVG">
-                                <rect key="frame" x="20" y="88" width="374" height="47"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wVR-Zc-GVG">
+                                <rect key="frame" x="20" y="93" width="374" height="65"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="65" id="DfS-hV-HoB"/>
+                                </constraints>
                             </pickerView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="S2a-h8-HWF" firstAttribute="bottom" relation="lessThanOrEqual" secondItem="wVR-Zc-GVG" secondAttribute="bottom" constant="709" id="5gk-Z2-t5e"/>
+                            <constraint firstItem="wVR-Zc-GVG" firstAttribute="top" secondItem="S2a-h8-HWF" secondAttribute="top" constant="5" id="8GS-rw-aYu"/>
+                            <constraint firstItem="wVR-Zc-GVG" firstAttribute="leading" secondItem="S2a-h8-HWF" secondAttribute="leading" constant="20" id="pvN-jm-Wjz"/>
+                            <constraint firstItem="S2a-h8-HWF" firstAttribute="trailing" secondItem="wVR-Zc-GVG" secondAttribute="trailing" constant="20" id="saW-zw-cfd"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="S2a-h8-HWF"/>
                     </view>
                     <navigationItem key="navigationItem" id="pDD-bv-6Qu"/>
+                    <connections>
+                        <outlet property="choosingEventTipe" destination="wVR-Zc-GVG" id="FJg-x0-dvg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Reb-6l-pSh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

@@ -19,12 +19,18 @@ extension TripTableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "eventCell", for: indexPath)
         
         let events = trip.events
+        let image: UIImage!
         
         cell.textLabel?.text = events[indexPath.row].eventName
         
-        let image = ImageManager.setEventImage(eventComleted: events[indexPath.row].eventCompleted)
+        if indexPath.row == 0 {
+            image = ImageManager.setFirstEventImage(eventComleted: events[indexPath.row].eventCompleted)
+        } else if indexPath.row == events.count - 1{
+            image = ImageManager.setLastEventImage(eventComleted: events[indexPath.row].eventCompleted)
+        } else {
+            image = ImageManager.setUsualEventImage(eventComleted: events[indexPath.row].eventCompleted)
+        }
         cell.imageView?.image = image
-        
         return cell
     }
     
