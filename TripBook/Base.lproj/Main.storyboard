@@ -108,10 +108,10 @@
             </objects>
             <point key="canvasLocation" x="1737" y="-20"/>
         </scene>
-        <!--Add Trip View Controller-->
+        <!--Add Event View Controller-->
         <scene sceneID="Mn5-h2-jrG">
             <objects>
-                <viewController id="jxs-If-TDE" customClass="AddTripViewController" customModule="TripBook" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="jxs-If-TDE" customClass="AddEventViewController" customModule="TripBook" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="UhS-gI-thS">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

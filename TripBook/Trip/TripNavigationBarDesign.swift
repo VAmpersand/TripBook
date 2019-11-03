@@ -23,8 +23,7 @@ extension TripTableViewController {
         navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.black]
         
         navigationController?.navigationBar.prefersLargeTitles = true
-        
-        
+
         navigationItem.rightBarButtonItem = UIBarButtonItem(
             title: "Add",
             style: .plain,

@@ -7,4 +7,5 @@
 
 import UIKit
 
-  let eventTypes = ["Reseration apartment", "Reservation hotel room", "Departure", "Transfer", "Flight", "Bus ride", "Train ride"]
+  let eventTypes = ["Apartment reservation", "Hotel room reservation", "Transfer",
+                    "Car ride", "Flight", "Bus ride", "Train ride"]

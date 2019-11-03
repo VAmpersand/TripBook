@@ -1,5 +1,5 @@
 //
-//  AddTripPickerViewDataSourse.swift
+//  AddEventPickerViewDataSourse.swift
 //  TripBook
 //
 //  Created by Viktor on 03.11.2019.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-extension AddTripViewController {
+extension AddEventViewController {
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
@@ -26,13 +26,13 @@ extension AddTripViewController {
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         switch row {
         case 0:
-            print("Reseration apartment")
+            print("Apartment reservation")
         case 1:
-            print("Reservation hotel room")
+            print("Hotel room reservation")
         case 2:
-            print("Departure")
-        case 3:
             print("Transfer")
+        case 3:
+            print("Car ride")
         case 4:
             print("Flight")
         case 5:

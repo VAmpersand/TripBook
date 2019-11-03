@@ -1,5 +1,5 @@
 //
-//  TripViewController.swift
+//  AddEventViewController.swift
 //  TripBook
 //
 //  Created by Viktor on 31.10.2019.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AddTripViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
+class AddEventViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
     
     @IBOutlet weak var choosingEventTipe: UIPickerView!
     

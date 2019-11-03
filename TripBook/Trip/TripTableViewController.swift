@@ -20,8 +20,6 @@ class TripTableViewController: UITableViewController {
     }
 
     @objc func addingEvent() {
-        print("Add event")
-        
         performSegue(withIdentifier: "segueToVCEventAdding", sender: self)
     }
 }
