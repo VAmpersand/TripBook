@@ -10,7 +10,7 @@ import UIKit
 
 class AddEventViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
     
-    @IBOutlet weak var choosingEventTipe: UIPickerView!
+    @IBOutlet var choosingEventTipe: UIPickerView!
     
     override func viewDidLoad() {
         super.viewDidLoad()

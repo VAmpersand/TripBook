@@ -15,13 +15,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="done" translatesAutoresizingMaskIntoConstraints="NO" id="664-UL-zmr">
-                                <rect key="frame" x="16" y="104" width="83" height="87"/>
-                            </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="6vv-a9-CaG">
-                                <rect key="frame" x="107" y="165" width="252" height="314"/>
+                                <rect key="frame" x="107" y="165" width="252" height="322"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter destination country:" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UZp-35-aLE">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter a name for the trip:" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UZp-35-aLE">
                                         <rect key="frame" x="0.0" y="0.0" width="252" height="60"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="60" id="zWY-41-AhB"/>
@@ -32,28 +29,34 @@
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Country name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0Eh-qu-G6V">
                                         <rect key="frame" x="0.0" y="68" width="252" height="34"/>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter the start date of the trip:" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lHm-dc-nKR">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose the start date of the trip:" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lHm-dc-nKR">
                                         <rect key="frame" x="0.0" y="110" width="252" height="60"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="60" id="BvZ-bD-Klw"/>
-                                            <constraint firstAttribute="width" constant="252" id="fxF-dM-rfm"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-BoldItalic" family="Helvetica Neue" pointSize="20"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SYO-O4-OEj">
-                                        <rect key="frame" x="0.0" y="178" width="252" height="30"/>
+                                        <rect key="frame" x="0.0" y="178" width="252" height="34"/>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="34" id="Xqg-In-OhQ"/>
+                                        </constraints>
                                         <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <state key="normal" title="Button"/>
+                                        <connections>
+                                            <action selector="setStartDate:" destination="PX6-oV-U0q" eventType="touchUpInside" id="TwH-dr-rF2"/>
+                                        </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter the end date of the trip:" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bpT-i1-eFr">
-                                        <rect key="frame" x="0.0" y="216" width="252" height="60"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose the end date of the trip:" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bpT-i1-eFr">
+                                        <rect key="frame" x="0.0" y="220" width="252" height="60"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="252" id="ABp-QK-F4E"/>
                                             <constraint firstAttribute="height" constant="60" id="dmM-1D-eZa"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-BoldItalic" family="Helvetica Neue" pointSize="20"/>
@@ -61,18 +64,44 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bfe-VH-O9P">
-                                        <rect key="frame" x="0.0" y="284" width="252" height="30"/>
+                                        <rect key="frame" x="0.0" y="288" width="252" height="34"/>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="34" id="NmB-DG-xqb"/>
+                                        </constraints>
                                         <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <state key="normal" title="Button"/>
+                                        <connections>
+                                            <action selector="setEndDate:" destination="PX6-oV-U0q" eventType="touchUpInside" id="pbg-pB-GDL"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="done" translatesAutoresizingMaskIntoConstraints="NO" id="664-UL-zmr">
+                                <rect key="frame" x="16" y="104" width="83" height="87"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rrE-gc-Lma">
+                                <rect key="frame" x="268" y="104" width="91" height="43"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="rrE-gc-Lma" secondAttribute="height" multiplier="91:43" id="3vi-b8-8co"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="91" id="76H-3j-5M5"/>
+                                </constraints>
+                                <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="saveTrip:" destination="PX6-oV-U0q" eventType="touchUpInside" id="pNN-bL-BNb"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="664-UL-zmr" firstAttribute="width" secondItem="R47-Oo-7ko" secondAttribute="width" multiplier="0.221333" id="A1A-u2-f4P"/>
+                            <constraint firstItem="rrE-gc-Lma" firstAttribute="top" secondItem="a6p-Bl-FkX" secondAttribute="top" constant="16" id="In6-HW-dIr"/>
+                            <constraint firstItem="a6p-Bl-FkX" firstAttribute="trailing" secondItem="rrE-gc-Lma" secondAttribute="trailing" constant="16" id="N0A-tA-83E"/>
                             <constraint firstItem="664-UL-zmr" firstAttribute="leading" secondItem="a6p-Bl-FkX" secondAttribute="leading" constant="16" id="Qr3-lN-8ZM"/>
                             <constraint firstItem="6vv-a9-CaG" firstAttribute="top" secondItem="664-UL-zmr" secondAttribute="bottom" constant="-26" id="Vty-Tz-Cph"/>
+                            <constraint firstItem="rrE-gc-Lma" firstAttribute="leading" secondItem="a6p-Bl-FkX" secondAttribute="leading" constant="268" id="fis-oZ-xfr"/>
                             <constraint firstItem="6vv-a9-CaG" firstAttribute="trailing" secondItem="a6p-Bl-FkX" secondAttribute="trailing" constant="-16" id="fki-vm-nw1"/>
                             <constraint firstItem="664-UL-zmr" firstAttribute="top" secondItem="a6p-Bl-FkX" secondAttribute="top" constant="16" id="ioI-Wd-7dd"/>
                             <constraint firstItem="6vv-a9-CaG" firstAttribute="leading" secondItem="664-UL-zmr" secondAttribute="trailing" constant="8" id="kfY-Ex-6EJ"/>
@@ -81,6 +110,16 @@
                         <viewLayoutGuide key="safeArea" id="a6p-Bl-FkX"/>
                     </view>
                     <navigationItem key="navigationItem" id="B1A-40-nQ4"/>
+                    <connections>
+                        <outlet property="countryLabel" destination="UZp-35-aLE" id="QHm-ve-51T"/>
+                        <outlet property="countryTextField" destination="0Eh-qu-G6V" id="eaC-8Q-9fV"/>
+                        <outlet property="endDateButton" destination="bfe-VH-O9P" id="X3r-uM-yxh"/>
+                        <outlet property="endDateLabel" destination="bpT-i1-eFr" id="KiL-mb-lB0"/>
+                        <outlet property="imageAddTripVC" destination="664-UL-zmr" id="ywg-jA-9Gw"/>
+                        <outlet property="saveButton" destination="rrE-gc-Lma" id="wzm-Nf-4aZ"/>
+                        <outlet property="startDateButton" destination="SYO-O4-OEj" id="hOv-Vw-fWs"/>
+                        <outlet property="startDateLabel" destination="lHm-dc-nKR" id="WLt-eE-RcF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BM9-yL-cfG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

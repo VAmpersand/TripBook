@@ -8,7 +8,7 @@
 import UIKit
 import RealmSwift
 
-class TripListTableViewController: UITableViewController, UIPickerViewDelegate, UIPickerViewDataSource {
+class TripListTableViewController: UITableViewController {
 
     let cellID = "cell"
     
@@ -23,9 +23,6 @@ class TripListTableViewController: UITableViewController, UIPickerViewDelegate, 
     var trip = Trip()
     
     func addEvent(){
-        trip.events.append(event)
-        trip.events.append(event)
-        trip.events.append(event)
         trip.events.append(event)
         trip.events.append(event)
         trip.events.append(event)
