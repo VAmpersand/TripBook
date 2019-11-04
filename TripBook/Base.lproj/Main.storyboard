@@ -1,37 +1,116 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="v8e-jq-zRd">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="v8e-jq-zRd">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Add Trip View Controller-->
+        <scene sceneID="Esz-H5-AiD">
+            <objects>
+                <viewController id="PX6-oV-U0q" customClass="AddTripViewController" customModule="TripBook" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="R47-Oo-7ko">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="done" translatesAutoresizingMaskIntoConstraints="NO" id="664-UL-zmr">
+                                <rect key="frame" x="16" y="104" width="83" height="87"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="6vv-a9-CaG">
+                                <rect key="frame" x="107" y="165" width="252" height="314"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter destination country:" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UZp-35-aLE">
+                                        <rect key="frame" x="0.0" y="0.0" width="252" height="60"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="zWY-41-AhB"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-BoldItalic" family="Helvetica Neue" pointSize="21"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Country name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0Eh-qu-G6V">
+                                        <rect key="frame" x="0.0" y="68" width="252" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter the start date of the trip:" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lHm-dc-nKR">
+                                        <rect key="frame" x="0.0" y="110" width="252" height="60"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="BvZ-bD-Klw"/>
+                                            <constraint firstAttribute="width" constant="252" id="fxF-dM-rfm"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-BoldItalic" family="Helvetica Neue" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SYO-O4-OEj">
+                                        <rect key="frame" x="0.0" y="178" width="252" height="30"/>
+                                        <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <state key="normal" title="Button"/>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter the end date of the trip:" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bpT-i1-eFr">
+                                        <rect key="frame" x="0.0" y="216" width="252" height="60"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="252" id="ABp-QK-F4E"/>
+                                            <constraint firstAttribute="height" constant="60" id="dmM-1D-eZa"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-BoldItalic" family="Helvetica Neue" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bfe-VH-O9P">
+                                        <rect key="frame" x="0.0" y="284" width="252" height="30"/>
+                                        <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <state key="normal" title="Button"/>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="664-UL-zmr" firstAttribute="width" secondItem="R47-Oo-7ko" secondAttribute="width" multiplier="0.221333" id="A1A-u2-f4P"/>
+                            <constraint firstItem="664-UL-zmr" firstAttribute="leading" secondItem="a6p-Bl-FkX" secondAttribute="leading" constant="16" id="Qr3-lN-8ZM"/>
+                            <constraint firstItem="6vv-a9-CaG" firstAttribute="top" secondItem="664-UL-zmr" secondAttribute="bottom" constant="-26" id="Vty-Tz-Cph"/>
+                            <constraint firstItem="6vv-a9-CaG" firstAttribute="trailing" secondItem="a6p-Bl-FkX" secondAttribute="trailing" constant="-16" id="fki-vm-nw1"/>
+                            <constraint firstItem="664-UL-zmr" firstAttribute="top" secondItem="a6p-Bl-FkX" secondAttribute="top" constant="16" id="ioI-Wd-7dd"/>
+                            <constraint firstItem="6vv-a9-CaG" firstAttribute="leading" secondItem="664-UL-zmr" secondAttribute="trailing" constant="8" id="kfY-Ex-6EJ"/>
+                            <constraint firstItem="664-UL-zmr" firstAttribute="height" secondItem="R47-Oo-7ko" secondAttribute="height" multiplier="0.107143" id="lXS-P4-aKq"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="a6p-Bl-FkX"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="B1A-40-nQ4"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BM9-yL-cfG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="911.20000000000005" y="-741.13300492610836"/>
+        </scene>
         <!--Trip List Table View Controller-->
         <scene sceneID="CJp-pj-xFJ">
             <objects>
                 <tableViewController id="1mQ-c5-pab" customClass="TripListTableViewController" customModule="TripBook" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="gli-1T-3ff">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" textLabel="wx7-UU-MPv" detailTextLabel="oqt-nq-lcF" imageView="Nj7-wF-fsQ" rowHeight="37" style="IBUITableViewCellStyleValue1" id="k98-DY-vVr">
-                                <rect key="frame" x="0.0" y="28" width="414" height="37"/>
+                                <rect key="frame" x="0.0" y="28" width="375" height="37"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="k98-DY-vVr" id="UVa-FK-248">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="37"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="37"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="wx7-UU-MPv">
-                                            <rect key="frame" x="20" y="6" width="44" height="25.5"/>
+                                            <rect key="frame" x="15.999999999999996" y="5.9999999999999982" width="43.666666666666664" height="25.333333333333332"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" name="HelveticaNeue-BoldItalic" family="Helvetica Neue" pointSize="21"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="oqt-nq-lcF">
-                                            <rect key="frame" x="354.5" y="10" width="39.5" height="20.5"/>
+                                            <rect key="frame" x="319.66666666666669" y="9.9999999999999982" width="39.333333333333336" height="20.333333333333332"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" name="HelveticaNeue-ThinItalic" family="Helvetica Neue" pointSize="17"/>
                                             <nil key="textColor"/>
@@ -54,6 +133,7 @@
                     <connections>
                         <segue destination="jxs-If-TDE" kind="show" identifier="segueToVCFirstEventAdding" id="GZy-SY-Z98"/>
                         <segue destination="9Bh-yM-FL6" kind="show" identifier="segueToTripVC" id="orQ-rA-wDf"/>
+                        <segue destination="PX6-oV-U0q" kind="show" identifier="segueToVCTripAdding" id="pRE-hy-bs3"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wyk-vt-LU5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -65,26 +145,26 @@
             <objects>
                 <tableViewController id="9Bh-yM-FL6" customClass="TripTableViewController" customModule="TripBook" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="QFn-YY-QID">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="eventCell" textLabel="Cs7-Tt-87a" detailTextLabel="Nqb-ct-G0r" style="IBUITableViewCellStyleSubtitle" id="hl9-Y4-ZZw">
-                                <rect key="frame" x="0.0" y="28" width="414" height="61.5"/>
+                                <rect key="frame" x="0.0" y="28" width="375" height="61.666667938232422"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="hl9-Y4-ZZw" id="qdO-Cb-R3K">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="61.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="61.666667938232422"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Cs7-Tt-87a">
-                                            <rect key="frame" x="20" y="8" width="37.5" height="21.5"/>
+                                            <rect key="frame" x="16.000000000000004" y="8.6666666666666661" width="37.333333333333336" height="21.666666666666668"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" name="HelveticaNeue-BoldItalic" family="Helvetica Neue" pointSize="18"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Nqb-ct-G0r">
-                                            <rect key="frame" x="20" y="32.5" width="46.5" height="18"/>
+                                            <rect key="frame" x="16.000000000000004" y="33.666666666666671" width="46.333333333333336" height="18"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" name="HelveticaNeue-ThinItalic" family="Helvetica Neue" pointSize="15"/>
                                             <nil key="textColor"/>
@@ -113,11 +193,11 @@
             <objects>
                 <viewController id="jxs-If-TDE" customClass="AddEventViewController" customModule="TripBook" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="UhS-gI-thS">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wVR-Zc-GVG">
-                                <rect key="frame" x="20" y="93" width="374" height="65"/>
+                                <rect key="frame" x="20" y="93" width="335" height="65"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="65" id="DfS-hV-HoB"/>
                                 </constraints>
@@ -147,7 +227,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="v8e-jq-zRd" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="dgt-XH-SVL">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -160,6 +240,9 @@
             <point key="canvasLocation" x="119" y="-18"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="done" width="31" height="31"/>
+    </resources>
     <inferredMetricsTieBreakers>
         <segue reference="ZMu-PN-P3o"/>
     </inferredMetricsTieBreakers>

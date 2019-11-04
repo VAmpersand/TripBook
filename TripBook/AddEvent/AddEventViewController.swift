@@ -17,7 +17,7 @@ class AddEventViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
         
         choosingEventTipe.delegate = self
         choosingEventTipe.dataSource = self
-        
+        setupView()
         
     }
 

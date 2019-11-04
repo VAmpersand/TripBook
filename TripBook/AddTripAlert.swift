@@ -15,10 +15,7 @@ enum Action {
 
 extension TripListTableViewController {
     
-    @objc func addTripFunc() {
-        print("Add trip")
-        showAddingAlert(sentBy: "Trip start date:")
-    }
+    
     
     func showAddingAlert(sentBy: String) {
         let title = "Test"
@@ -31,13 +28,13 @@ extension TripListTableViewController {
         let pickerFrameStart: CGRect = CGRect(x: 20, y: 52, width: 230, height: 60) // CGRectMake(left), top, width, height) - left and top are like margins
         let pickerStart: UIPickerView = UIPickerView(frame: pickerFrameStart)
 
-        if sentBy == "Trip start date:" {
-            pickerStart.tag = 1
-        } else if sentBy == "Trip end date:" {
-            pickerStart.tag = 2
-        } else {
-            pickerStart.tag = 0
-        }
+//        if sentBy == "Trip start date:" {
+//            pickerStart.tag = 1
+//        } else if sentBy == "Trip end date:" {
+//            pickerStart.tag = 2
+//        } else {
+//            pickerStart.tag = 0
+//        }
 
         //set the pickers datasource and delegate
         pickerStart.delegate = self
@@ -46,13 +43,13 @@ extension TripListTableViewController {
         let pickerFrameEnd: CGRect = CGRect(x: 20, y: 120, width: 230, height: 60) // CGRectMake(left), top, width, height) - left and top are like margins
         let pickerEnd: UIPickerView = UIPickerView(frame: pickerFrameEnd)
               
-              if sentBy == "Trip start date:" {
-                  pickerEnd.tag = 1
-              } else if sentBy == "Trip end date:" {
-                  pickerEnd.tag = 2
-              } else {
-                  pickerEnd.tag = 0
-              }
+//              if sentBy == "Trip start date:" {
+//                  pickerEnd.tag = 1
+//              } else if sentBy == "Trip end date:" {
+//                  pickerEnd.tag = 2
+//              } else {
+//                  pickerEnd.tag = 0
+//              }
               
               //set the pickers datasource and delegate
               pickerEnd.delegate = self

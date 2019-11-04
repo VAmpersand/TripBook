@@ -14,11 +14,11 @@ class TripListTableViewController: UITableViewController, UIPickerViewDelegate, 
     
     var trips: Results<Trip>!
     
+    
     // Test
+
     var testTripList = [Trip(), Trip(), Trip()]
-    
-   
-    
+  
     let event = Event()
     var trip = Trip()
     
@@ -42,5 +42,10 @@ class TripListTableViewController: UITableViewController, UIPickerViewDelegate, 
         addEvent()
         setupView()
         
+    }
+    
+    @objc func addingTrip() {
+        print("Add trip")
+        performSegue(withIdentifier: "segueToVCTripAdding", sender: self)
     }
 }
