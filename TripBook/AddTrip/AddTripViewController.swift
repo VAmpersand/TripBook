@@ -42,8 +42,8 @@ class AddTripViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
         guard let text = countryTextField.text else { return }
         trip.tripName = text
         print(trip.tripName)
-        
-       
+        dismiss(animated: true, completion: nil)
+
     }
     
 }
