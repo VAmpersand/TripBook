@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AddTripViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
+class AddTripViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
 
     @IBOutlet var imageAddTripVC: UIImageView!
     @IBOutlet var countryLabel: UILabel!
