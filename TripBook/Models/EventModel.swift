@@ -27,8 +27,8 @@ class Event: Object {
     @objc dynamic var placePlan = "Data: JPG, PDF, PNG" // Add correct data format
     @objc dynamic var airportCode = "Airport code: : URL request" // Add correct data format
     
-    @objc dynamic var startEvent = "Date" // Add correct data format
-    @objc dynamic var endEvent = "Date" // Add correct data format
+    @objc dynamic var startEvent = Date()
+    @objc dynamic var endEvent = Date()
     let notification = List<Notification>()
     
     @objc dynamic var ticket = "Data: JPG, PDF, PNG" // Add correct data format

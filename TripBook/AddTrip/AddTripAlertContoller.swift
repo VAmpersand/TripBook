@@ -8,45 +8,38 @@
 
 import UIKit
 
-enum Action {
-    case save
-    case editing
+enum KindOfDate {
+    case startDate
+    case endDate
 }
 
 extension AddTripViewController {
             
-            func showAddingAlert() {
+    func showChoosingDateAlert(kindOfDate: KindOfDate) {
                 let title = "Choose the date"
-                let message = "\n\n\n\n\n\n\n\n\n"
+                let message = "\n\n\n\n\n\n\n\n"
                 let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
                 
-                let pickerView = setPickerView()
-                
-                alert.view.addSubview(pickerView)
+                let picker = setDataPicker()
                
                 let saveAction = UIAlertAction(title: "Save", style: .default) { _ in
-                    //
-                    //                          if let carModel = alert.textFields?.first?.text!, !carModel.isEmpty,
-                    //                              let bodyType = alert.textFields?[1].text!, !bodyType.isEmpty,
-                    //                              let manufacturer = alert.textFields?[2].text!, !manufacturer.isEmpty,
-                    //                              let yearOfIssue = alert.textFields?[3].text!, !yearOfIssue.isEmpty {
-                    //
-                    //                              switch action {
-                    //                              case .save:
-                    //                                print("Save")
-                    //                              case .editing:
-                    //                                print("Edit")
-                    //                              }
-                    //                          } else {
-                    //                             self.showErrorAlert()
-                    //                          }
+                    switch kindOfDate {
+                    case .startDate:
+                        self.startDate = self.tempDate
+                        self.setTitleButton(button: self.startDateButton, date: self.startDate)
+                    case .endDate:
+                        self.endDate = self.tempDate
+                        self.setTitleButton(button: self.endDateButton, date: self.endDate)
+                    }
                 }
                 
                 let cancelAction = UIAlertAction(title: "Cancel", style: .destructive)
                       
+                alert.view.addSubview(picker)
                 alert.addAction(saveAction)
                 alert.addAction(cancelAction)
                 present(alert, animated: true)
+
 
             }
      

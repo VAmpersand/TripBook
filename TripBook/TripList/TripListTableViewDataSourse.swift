@@ -19,7 +19,12 @@ extension TripListTableViewController {
         
         let trip = testTripList[indexPath.row]
         cell.textLabel?.text = trip.tripName
-        cell.detailTextLabel?.text = trip.startTrip + " - " + trip.endTrip
+        
+        let dateManager = DateManager()
+        let dateStr = dateManager.setDateStyleForTripListTVC(startDate: trip.startTrip,
+                                                             endDate: trip.endTrip)
+        
+        cell.detailTextLabel?.text = dateStr
         
         let image = ImageManager.setTripImage(tripComleted: trip.tripCompleted)
         cell.imageView?.image = image
