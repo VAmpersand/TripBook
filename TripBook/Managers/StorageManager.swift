@@ -17,7 +17,7 @@ class StorageManager {
             realm.add(trip)
         }
     }
-  
+    
     static func removeTrip(_ trip: Trip) {
         try! realm.write {
             realm.delete(trip)
@@ -26,7 +26,7 @@ class StorageManager {
     
     static func editTrip(_ trip: Trip, _ newTrip: Trip) {
         try! realm.write {
-           
+            
         }
     }
 }

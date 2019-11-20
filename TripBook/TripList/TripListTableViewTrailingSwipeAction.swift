@@ -12,7 +12,7 @@ extension TripListTableViewController {
     
     func editingTrip(at indexPath: IndexPath) -> UIContextualAction {
         let button = UIContextualAction(style: .normal, title: "Editing") { (_, action, completion) in
-            self.performSegue(withIdentifier: "segueToVCTripAdding", sender: self )
+            self.segueToVCTripAddingAndEdditing()
 
             completion(true)
         }

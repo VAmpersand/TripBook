@@ -16,7 +16,6 @@ class TripTableViewController: UITableViewController {
         super.viewDidLoad()
         
         setupNavigationBar()
-        
     }
 
 }

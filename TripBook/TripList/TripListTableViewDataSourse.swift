@@ -53,26 +53,27 @@ extension TripListTableViewController {
         let editing = editingTrip(at: indexPath)
         let delete = deleteTrip(at: indexPath)
         
-        //        currentCar = cars[indexPath.row]
-        //        currentIndexPath = indexPath
-        
         return UISwipeActionsConfiguration(actions: [delete, editing])
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
-        if segue.identifier == "segueToTripVC" {
-            let tripVC = segue.destination as! TripTableViewController
-            if let indexPath = tableView.indexPathForSelectedRow {
-                tripVC.trip = trips[indexPath.row]
+        if let identifier = segue.identifier {
+            switch identifier {
+            case "segueToTripVC":
+                let tripVC = segue.destination as! TripTableViewController
+                if let indexPath = tableView.indexPathForSelectedRow {
+                    tripVC.trip = trips[indexPath.row]
+                }
+            case "segueToVCTripAdding":
+                let addingVC = segue.destination as! AddTripViewController
+                if let indexPath = tableView.indexPathForSelectedRow {
+                    addingVC.tripForAdditing = trips[indexPath.row]
+                }
+            default:
+                break
             }
-        }
-        
-        if segue.identifier == "segueToVCTripAdding" {
-            let addingVC = segue.destination as! AddTripViewController
-            if let indexPath = tableView.indexPathForSelectedRow {
-                addingVC.tripForAdditing = trips[indexPath.row]
-            }
+            
         }
     }
 }

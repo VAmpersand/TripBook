@@ -53,6 +53,12 @@ class AddTripViewController: UIViewController {
         StorageManager.saveTrip(trip)
         
         self.navigationController?.popViewController(animated: true)
+        
+        guard let tripTest = tripForAdditing  else {
+            print("Error")
+            return      
+        }
+        print(tripTest.tripName)
     }
     
 }

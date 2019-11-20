@@ -205,7 +205,7 @@
                     <connections>
                         <segue destination="jxs-If-TDE" kind="show" identifier="segueToVCFirstEventAdding" id="GZy-SY-Z98"/>
                         <segue destination="9Bh-yM-FL6" kind="show" identifier="segueToTripVC" id="orQ-rA-wDf"/>
-                        <segue destination="PX6-oV-U0q" kind="show" identifier="segueToVCTripAdding" id="pRE-hy-bs3"/>
+                        <segue destination="PX6-oV-U0q" kind="show" identifier="segueToVCTripAdding" id="c3G-A2-8hZ"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wyk-vt-LU5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -316,6 +316,6 @@
         <image name="done" width="31" height="31"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="ZMu-PN-P3o"/>
+        <segue reference="GZy-SY-Z98"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -9,18 +9,41 @@ import UIKit
 import RealmSwift
 
 class TripListTableViewController: UITableViewController {
-
+    
     let cellID = "cell"
     
     var trips: Results<Trip>!
     
+    let trip = Trip()
+    
+    // Set Test trip
+    
+    let tripTest = Trip()
+    
+    let event = Event()
+    
+    func setTestTrip() {
+        tripTest.events.append(event)
+        tripTest.events.append(event)
+        tripTest.events.append(event)
+        tripTest.events.append(event)
+        tripTest.events.append(event)
+        tripTest.events.append(event)
+        tripTest.tripName = "Test trip"
+        
+        StorageManager.saveTrip(tripTest)
+    }
+    
+    //
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setupView()
+        setTestTrip()
+        
         
         trips = realm.objects(Trip.self)
     }
- 
+    
 }

@@ -24,18 +24,17 @@ extension TripListTableViewController {
         
         navigationController?.navigationBar.prefersLargeTitles = true
         
-        
         navigationItem.rightBarButtonItem = UIBarButtonItem(
             title: "Add",
             style: .plain,
             target: self,
-            action: #selector(addingTrip)
+            action: #selector(segueToVCTripAddingAndEdditing)
         )
         
         navigationController?.navigationBar.tintColor = .black
     }
     
-    @objc func addingTrip() {
+    @objc func segueToVCTripAddingAndEdditing() {
           performSegue(withIdentifier: "segueToVCTripAdding", sender: self)
       }
 }
