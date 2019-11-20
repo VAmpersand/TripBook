@@ -15,34 +15,12 @@ class TripListTableViewController: UITableViewController {
     var trips: Results<Trip>!
     
     
-    // Test
-
-    var testTripList = [Trip(), Trip(), Trip()]
-  
-    let event = Event()
-    var trip = Trip()
-    
-    func addEvent(){
-        trip.events.append(event)
-        trip.events.append(event)
-        trip.events.append(event)
-        trip.events.append(event)
-        trip.events.append(event)
-        testTripList.append(trip)
-    }
-    
-    //
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        addEvent()
+        
         setupView()
         
+        trips = realm.objects(Trip.self)
     }
-    
-    @objc func addingTrip() {
-        print("Add trip")
-        performSegue(withIdentifier: "segueToVCTripAdding", sender: self)
-    }
+ 
 }

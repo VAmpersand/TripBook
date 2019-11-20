@@ -34,4 +34,8 @@ extension TripListTableViewController {
         
         navigationController?.navigationBar.tintColor = .black
     }
+    
+    @objc func addingTrip() {
+          performSegue(withIdentifier: "segueToVCTripAdding", sender: self)
+      }
 }

@@ -11,13 +11,14 @@ import UIKit
 extension TripListTableViewController {
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return testTripList.count
+        return trips.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellID, for: indexPath)
         
-        let trip = testTripList[indexPath.row]
+        
+        let trip = trips[indexPath.row]
         cell.textLabel?.text = trip.tripName
         
         let dateManager = DateManager()
@@ -38,7 +39,7 @@ extension TripListTableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        let trip = testTripList[indexPath.row]
+        let trip = trips[indexPath.row]
         
         if trip.events.isEmpty {
             performSegue(withIdentifier: "segueToVCFirstEventAdding", sender: self)
@@ -47,27 +48,31 @@ extension TripListTableViewController {
         }
     }
     
+    override func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        
+        let editing = editingTrip(at: indexPath)
+        let delete = deleteTrip(at: indexPath)
+        
+        //        currentCar = cars[indexPath.row]
+        //        currentIndexPath = indexPath
+        
+        return UISwipeActionsConfiguration(actions: [delete, editing])
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-       
+        
         if segue.identifier == "segueToTripVC" {
             let tripVC = segue.destination as! TripTableViewController
             if let indexPath = tableView.indexPathForSelectedRow {
-                tripVC.trip = testTripList[indexPath.row]
+                tripVC.trip = trips[indexPath.row]
+            }
+        }
+        
+        if segue.identifier == "segueToVCTripAdding" {
+            let addingVC = segue.destination as! AddTripViewController
+            if let indexPath = tableView.indexPathForSelectedRow {
+                addingVC.tripForAdditing = trips[indexPath.row]
             }
         }
     }
-    
-    //Добавление кнопки редактирования и удаления при свайпе по ячейке
-    
-    //override func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
-    //
-    //    let editing = editingCarsEntry(at: indexPath)
-    //    let delete = deleteCarsEntry(at: indexPath)
-    //
-    //    currentCar = cars[indexPath.row]
-    //    currentIndexPath = indexPath
-    //
-    //    return UISwipeActionsConfiguration(actions: [delete, editing])
-    //}
-    
 }

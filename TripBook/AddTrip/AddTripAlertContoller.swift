@@ -25,11 +25,11 @@ extension AddTripViewController {
                 let saveAction = UIAlertAction(title: "Save", style: .default) { _ in
                     switch kindOfDate {
                     case .startDate:
-                        self.startDate = self.tempDate
-                        self.setTitleButton(button: self.startDateButton, date: self.startDate)
+                        self.trip.startTrip = self.tempDate
+                        self.setTitleButton(button: self.startDateButton, date: self.trip.startTrip)
                     case .endDate:
-                        self.endDate = self.tempDate
-                        self.setTitleButton(button: self.endDateButton, date: self.endDate)
+                        self.trip.endTrip = self.tempDate
+                        self.setTitleButton(button: self.endDateButton, date: self.trip.endTrip)
                     }
                 }
                 
@@ -39,7 +39,6 @@ extension AddTripViewController {
                 alert.addAction(saveAction)
                 alert.addAction(cancelAction)
                 present(alert, animated: true)
-
 
             }
      

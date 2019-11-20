@@ -24,18 +24,19 @@ class AddTripViewController: UIViewController {
     let dateManager = DateManager()
     
     var tempDate = Date()
-    var startDate = Date()
-    var endDate = Date()
     
     var trip = Trip()
+    
+    var tripForAdditing: Trip!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setupView()
-        setTitleButton(button: endDateButton, date: endDate)
-        setTitleButton(button: startDateButton, date: startDate)
-        
+        countryTextField.text = trip.tripName
+        setTitleButton(button: endDateButton, date: trip.startTrip)
+        setTitleButton(button: startDateButton, date: trip.endTrip)
+    
     }
     
     @IBAction func setStartDate(_ sender: Any) {
@@ -49,8 +50,9 @@ class AddTripViewController: UIViewController {
     @IBAction func saveTrip(_ sender: Any) {
         guard let text = countryTextField.text else { return }
         trip.tripName = text
-        print(trip.tripName)
-        dismiss(animated: true, completion: nil)
+        StorageManager.saveTrip(trip)
+        
+        self.navigationController?.popViewController(animated: true)
     }
     
 }
