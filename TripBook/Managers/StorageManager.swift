@@ -26,7 +26,9 @@ class StorageManager {
     
     static func editTrip(_ trip: Trip, _ newTrip: Trip) {
         try! realm.write {
-            
+            trip.tripName = newTrip.tripName
+            trip.startTrip = newTrip.startTrip
+            trip.endTrip = newTrip.endTrip
         }
     }
 }

@@ -26,17 +26,13 @@ class AddTripViewController: UIViewController {
     var tempDate = Date()
     
     var trip = Trip()
-    
-    var tripForAdditing: Trip!
+    var tripForEdditing: Trip!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setupView()
-        countryTextField.text = trip.tripName
-        setTitleButton(button: endDateButton, date: trip.startTrip)
-        setTitleButton(button: startDateButton, date: trip.endTrip)
-    
+        setTripParametrs()
     }
     
     @IBAction func setStartDate(_ sender: Any) {
@@ -50,17 +46,27 @@ class AddTripViewController: UIViewController {
     @IBAction func saveTrip(_ sender: Any) {
         guard let text = countryTextField.text else { return }
         trip.tripName = text
-        StorageManager.saveTrip(trip)
         
-        self.navigationController?.popViewController(animated: true)
-        
-        guard let tripTest = tripForAdditing  else {
-            print("Error")
-            return      
+        DispatchQueue.main.async {
+            StorageManager.saveTrip(self.trip)
         }
-        print(tripTest.tripName)
+        
+        self.viewDidLoad()
+        self.viewWillAppear(true)
+        self.dismiss(animated: true, completion: nil)
     }
     
+    func setTripParametrs() {
+        if tripForEdditing == nil {
+            countryTextField.text = trip.tripName
+            setTitleButton(button: endDateButton, date: trip.startTrip)
+            setTitleButton(button: startDateButton, date: trip.endTrip)
+        } else {
+            countryTextField.text = tripForEdditing.tripName
+            setTitleButton(button: endDateButton, date: tripForEdditing.startTrip)
+            setTitleButton(button: startDateButton, date: tripForEdditing.endTrip)
+        }
+    }
 }
 
 extension AddTripViewController {

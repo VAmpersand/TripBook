@@ -10,13 +10,13 @@
         <!--Add Trip View Controller-->
         <scene sceneID="Esz-H5-AiD">
             <objects>
-                <viewController id="PX6-oV-U0q" customClass="AddTripViewController" customModule="TripBook" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AddingTrip" id="PX6-oV-U0q" customClass="AddTripViewController" customModule="TripBook" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="R47-Oo-7ko">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="758"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="6vv-a9-CaG">
-                                <rect key="frame" x="107" y="165" width="252" height="322"/>
+                                <rect key="frame" x="107" y="71.333333333333314" width="252" height="322"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter a name for the trip:" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UZp-35-aLE">
                                         <rect key="frame" x="0.0" y="0.0" width="252" height="60"/>
@@ -28,7 +28,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Trip name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0Eh-qu-G6V">
-                                        <rect key="frame" x="0.0" y="68" width="252" height="34"/>
+                                        <rect key="frame" x="0.0" y="68.000000000000014" width="252" height="34"/>
                                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
@@ -100,10 +100,10 @@
                                 </subviews>
                             </stackView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="done" translatesAutoresizingMaskIntoConstraints="NO" id="664-UL-zmr">
-                                <rect key="frame" x="16" y="104" width="83" height="87"/>
+                                <rect key="frame" x="16" y="16" width="83" height="81.333333333333329"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rrE-gc-Lma">
-                                <rect key="frame" x="268" y="104" width="91" height="43"/>
+                                <rect key="frame" x="268" y="16" width="91" height="43"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="rrE-gc-Lma" secondAttribute="height" multiplier="91:43" id="3vi-b8-8co"/>
@@ -205,7 +205,7 @@
                     <connections>
                         <segue destination="jxs-If-TDE" kind="show" identifier="segueToVCFirstEventAdding" id="GZy-SY-Z98"/>
                         <segue destination="9Bh-yM-FL6" kind="show" identifier="segueToTripVC" id="orQ-rA-wDf"/>
-                        <segue destination="PX6-oV-U0q" kind="show" identifier="segueToVCTripAdding" id="c3G-A2-8hZ"/>
+                        <segue destination="PX6-oV-U0q" kind="presentation" identifier="segueToVCTripAdding" id="c3G-A2-8hZ"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wyk-vt-LU5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

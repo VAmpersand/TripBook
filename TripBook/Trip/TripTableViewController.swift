@@ -12,10 +12,20 @@ class TripTableViewController: UITableViewController {
     
     var trip: Trip!
     
+    var tripForAdditing: Trip!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setupNavigationBar()
+        testPrint()
     }
 
+    func testPrint() {
+        guard let test = tripForAdditing else {
+            print("Error2")
+            return
+        }
+        print(test.tripName)
+    }
 }

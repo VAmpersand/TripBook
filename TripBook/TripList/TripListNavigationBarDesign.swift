@@ -28,13 +28,13 @@ extension TripListTableViewController {
             title: "Add",
             style: .plain,
             target: self,
-            action: #selector(segueToVCTripAddingAndEdditing)
+            action: #selector(segueToVCTripAdding)
         )
         
         navigationController?.navigationBar.tintColor = .black
     }
     
-    @objc func segueToVCTripAddingAndEdditing() {
+    @objc func segueToVCTripAdding() {
           performSegue(withIdentifier: "segueToVCTripAdding", sender: self)
       }
 }

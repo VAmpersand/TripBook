@@ -13,9 +13,7 @@ class TripListTableViewController: UITableViewController {
     let cellID = "cell"
     
     var trips: Results<Trip>!
-    
-    let trip = Trip()
-    
+        
     // Set Test trip
     
     let tripTest = Trip()
@@ -41,7 +39,6 @@ class TripListTableViewController: UITableViewController {
         
         setupView()
         setTestTrip()
-        
         
         trips = realm.objects(Trip.self)
     }

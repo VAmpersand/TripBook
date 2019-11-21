@@ -57,23 +57,12 @@ extension TripListTableViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
-        if let identifier = segue.identifier {
-            switch identifier {
-            case "segueToTripVC":
-                let tripVC = segue.destination as! TripTableViewController
-                if let indexPath = tableView.indexPathForSelectedRow {
-                    tripVC.trip = trips[indexPath.row]
-                }
-            case "segueToVCTripAdding":
-                let addingVC = segue.destination as! AddTripViewController
-                if let indexPath = tableView.indexPathForSelectedRow {
-                    addingVC.tripForAdditing = trips[indexPath.row]
-                }
-            default:
-                break
+        if segue.identifier == "segueToTripVC" {
+            let tripVC = segue.destination as! TripTableViewController
+            if let indexPath = tableView.indexPathForSelectedRow {
+                tripVC.trip = trips[indexPath.row]
             }
-            
         }
     }
 }
+
