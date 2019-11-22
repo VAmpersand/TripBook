@@ -6,11 +6,6 @@
 //  Copyright © 2019 Viktor. All rights reserved.
 //
 
-protocol ReloadTableDelegate {
-    func reloadTable()
-}
-
-
 
 import UIKit
 
@@ -31,11 +26,11 @@ class AddTripViewController: UIViewController {
     
     let dateManager = DateManager()
     
-    var delegate: ReloadTableDelegate?
     var tempDate = Date()
     
     var newTrip = Trip()
     var tripForEdditing: Trip!
+    var currentIndexPath: IndexPath!
     
     
     override func viewDidLoad() {
@@ -72,11 +67,9 @@ class AddTripViewController: UIViewController {
             }
         }
         
-        delegate?.reloadTable()
-        
         self.viewDidLoad()
         self.viewWillAppear(true)
-                
+        
         self.dismiss(animated: true, completion: nil)
     }
 }

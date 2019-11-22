@@ -15,8 +15,9 @@ extension TripListTableViewController {
             
             let edditingVC = self.storyboard?.instantiateViewController(withIdentifier: "AddingTrip") as! AddTripViewController
             edditingVC.tripForEdditing = self.trips[indexPath.row]
+            edditingVC.currentIndexPath = indexPath
             self.present(edditingVC, animated:true, completion: nil)
-
+            
             completion(true)
         }
         button.backgroundColor = .gray
@@ -31,7 +32,7 @@ extension TripListTableViewController {
                 StorageManager.removeTrip(self.trips[indexPath.row])
                 self.tableView.deleteRows(at: [indexPath], with: .automatic)
             }
-
+            
             completion(true)
         }
         button.backgroundColor = .red

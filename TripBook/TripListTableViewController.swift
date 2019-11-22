@@ -8,7 +8,7 @@
 import UIKit
 import RealmSwift
 
-class TripListTableViewController: UITableViewController, ReloadTableDelegate {
+class TripListTableViewController: UITableViewController {
     
     let cellID = "cell"
     
@@ -38,10 +38,6 @@ class TripListTableViewController: UITableViewController, ReloadTableDelegate {
         super.viewWillAppear(true)
           tableView.reloadData()
         
-    }
-    
-    func reloadTable() {
-        title = "Succes"
     }
     
     override func viewDidLoad() {

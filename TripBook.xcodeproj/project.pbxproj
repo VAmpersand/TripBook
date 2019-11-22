@@ -34,6 +34,7 @@
 		77D418CE237202000095CD98 /* UIButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77D418CD237202000095CD98 /* UIButtonExtension.swift */; };
 		77D418D22373447A0095CD98 /* AddTripDataPickerDataSourse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77D418D12373447A0095CD98 /* AddTripDataPickerDataSourse.swift */; };
 		77D418D42373524D0095CD98 /* DateManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77D418D32373524D0095CD98 /* DateManager.swift */; };
+		77EB954E23887B62003BFFC6 /* TableUpdateManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77EB954D23887B62003BFFC6 /* TableUpdateManager.swift */; };
 		B1EDF778B35BE9DAECEB7BDA /* Pods_TripBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 246DABF25B76C2FC55E38E6A /* Pods_TripBook.framework */; };
 /* End PBXBuildFile section */
 
@@ -68,6 +69,7 @@
 		77D418CD237202000095CD98 /* UIButtonExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonExtension.swift; sourceTree = "<group>"; };
 		77D418D12373447A0095CD98 /* AddTripDataPickerDataSourse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTripDataPickerDataSourse.swift; sourceTree = "<group>"; };
 		77D418D32373524D0095CD98 /* DateManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateManager.swift; sourceTree = "<group>"; };
+		77EB954D23887B62003BFFC6 /* TableUpdateManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableUpdateManager.swift; sourceTree = "<group>"; };
 		7F5333B0C2092ED975E3E899 /* Pods-TripBook.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TripBook.release.xcconfig"; path = "Target Support Files/Pods-TripBook/Pods-TripBook.release.xcconfig"; sourceTree = "<group>"; };
 		E65C64B9C3CE5F90A3E71351 /* Pods-TripBook.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TripBook.debug.xcconfig"; path = "Target Support Files/Pods-TripBook/Pods-TripBook.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -196,6 +198,7 @@
 			isa = PBXGroup;
 			children = (
 				7736191123621DCA00AE271D /* StorageManager.swift */,
+				77EB954D23887B62003BFFC6 /* TableUpdateManager.swift */,
 				7761A594236C322D0067C209 /* ImageManager.swift */,
 				77D418D32373524D0095CD98 /* DateManager.swift */,
 			);
@@ -330,6 +333,7 @@
 				7761A59E236F0D250067C209 /* AddEventPickerViewDataSourse.swift in Sources */,
 				7736190E235F79C100AE271D /* TripListModel.swift in Sources */,
 				77D418C1236F563A0095CD98 /* AddTripNavigationBarDesign.swift in Sources */,
+				77EB954E23887B62003BFFC6 /* TableUpdateManager.swift in Sources */,
 				7761A58F236B780C0067C209 /* AddEventViewController.swift in Sources */,
 				7761A595236C322D0067C209 /* ImageManager.swift in Sources */,
 				77D418C523708FA90095CD98 /* AddEventNavigationBarDesign.swift in Sources */,
