@@ -6,9 +6,17 @@
 //  Copyright © 2019 Viktor. All rights reserved.
 //
 
+protocol ReloadTableDelegate {
+    func reloadTable()
+}
+
+
+
 import UIKit
 
 class AddTripViewController: UIViewController {
+    
+    let tripListTVC = TripListTableViewController()
     
     @IBOutlet var imageAddTripVC: UIImageView!
     @IBOutlet var countryLabel: UILabel!
@@ -23,16 +31,23 @@ class AddTripViewController: UIViewController {
     
     let dateManager = DateManager()
     
+    var delegate: ReloadTableDelegate?
     var tempDate = Date()
     
-    var trip = Trip()
+    var newTrip = Trip()
     var tripForEdditing: Trip!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setupView()
-        setTripParametrs()
+        
+        if tripForEdditing == nil {
+            setTripParametrs(trip: newTrip)
+        } else {
+            setTripParametrs(trip: tripForEdditing)
+        }
     }
     
     @IBAction func setStartDate(_ sender: Any) {
@@ -44,30 +59,28 @@ class AddTripViewController: UIViewController {
     }
     
     @IBAction func saveTrip(_ sender: Any) {
-        guard let text = countryTextField.text else { return }
-        trip.tripName = text
+        guard let tripName = countryTextField.text else { return }
+        newTrip.tripName = tripName
         
-        DispatchQueue.main.async {
-            StorageManager.saveTrip(self.trip)
+        if tripForEdditing == nil {
+            DispatchQueue.main.async {
+                StorageManager.saveTrip(self.newTrip)
+            }
+        } else {
+            DispatchQueue.main.async {
+                StorageManager.editTrip(self.tripForEdditing, self.newTrip)
+            }
         }
+        
+        delegate?.reloadTable()
         
         self.viewDidLoad()
         self.viewWillAppear(true)
+                
         self.dismiss(animated: true, completion: nil)
     }
-    
-    func setTripParametrs() {
-        if tripForEdditing == nil {
-            countryTextField.text = trip.tripName
-            setTitleButton(button: endDateButton, date: trip.startTrip)
-            setTitleButton(button: startDateButton, date: trip.endTrip)
-        } else {
-            countryTextField.text = tripForEdditing.tripName
-            setTitleButton(button: endDateButton, date: tripForEdditing.startTrip)
-            setTitleButton(button: startDateButton, date: tripForEdditing.endTrip)
-        }
-    }
 }
+
 
 extension AddTripViewController {
     
@@ -76,4 +89,9 @@ extension AddTripViewController {
         button.setTitle(date, for: .normal)
     }
     
+    func setTripParametrs(trip: Trip) {
+        countryTextField.text = trip.tripName
+        setTitleButton(button: endDateButton, date: trip.startTrip)
+        setTitleButton(button: startDateButton, date: trip.endTrip)
+    }
 }

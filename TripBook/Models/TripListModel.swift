@@ -15,5 +15,7 @@ class Trip: Object {
     @objc dynamic var endTrip = Date()
     let events = List<Event>()
     @objc dynamic var tripCompleted = false
+    @objc dynamic var dateOfCreation = Date()
+    
 }
 
