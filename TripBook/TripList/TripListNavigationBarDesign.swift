@@ -31,10 +31,17 @@ extension TripListTableViewController {
             action: #selector(segueToVCTripAdding)
         )
         
+        navigationItem.leftBarButtonItem = UIBarButtonItem(
+            title: "Reload",
+            style: .plain,
+            target: self,
+            action: #selector(reloadTable)
+        )
+        
         navigationController?.navigationBar.tintColor = .black
     }
     
-    @objc func segueToVCTripAdding() {
-          performSegue(withIdentifier: "segueToVCTripAdding", sender: self)
-      }
+    @objc func reloadTable() {
+        tableView.reloadData()
+    }
 }

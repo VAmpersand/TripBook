@@ -17,20 +17,16 @@ extension AddTripViewController {
     
     func setupNavigationBar() {
            
-           title = "Create trip"
-           
+        if tripForEdditing == nil {
+            title = "Create new trip"
+        } else {
+             title = "Edditing trip"
+        }
+   
            navigationController?.navigationBar.largeTitleTextAttributes = [.foregroundColor: UIColor.black]
            navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.black]
            
            navigationController?.navigationBar.prefersLargeTitles = true
-                   
-//           navigationItem.rightBarButtonItem = UIBarButtonItem(
-//               title: "Create",
-//               style: .plain,
-//               target: self,
-//               action: #selector(addingTrip)
-//           )
-//           
            navigationController?.navigationBar.tintColor = .black
        }
 }

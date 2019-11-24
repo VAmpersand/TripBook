@@ -6,6 +6,9 @@
 //  Copyright © 2019 Viktor. All rights reserved.
 //
 
+protocol ReloadTabelDelegate {
+    func reloadTable()
+}
 
 import UIKit
 
@@ -14,9 +17,6 @@ class AddTripViewController: UIViewController {
     let tripListTVC = TripListTableViewController()
     
     @IBOutlet var imageAddTripVC: UIImageView!
-    @IBOutlet var countryLabel: UILabel!
-    @IBOutlet var startDateLabel: UILabel!
-    @IBOutlet var endDateLabel: UILabel!
     
     @IBOutlet var countryTextField: UITextField!
     
@@ -25,6 +25,8 @@ class AddTripViewController: UIViewController {
     @IBOutlet var endDateButton: UIButton!
     
     let dateManager = DateManager()
+    
+    var delegat: ReloadTabelDelegate?
     
     var tempDate = Date()
     
@@ -67,10 +69,12 @@ class AddTripViewController: UIViewController {
             }
         }
         
+        delegat?.reloadTable()
+        
         self.viewDidLoad()
         self.viewWillAppear(true)
         
-        self.dismiss(animated: true, completion: nil)
+        self.navigationController?.popViewController(animated: true)
     }
 }
 

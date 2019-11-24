@@ -42,9 +42,9 @@ extension TripListTableViewController {
         let trip = trips[indexPath.row]
         
         if trip.events.isEmpty {
-            performSegue(withIdentifier: "segueToVCFirstEventAdding", sender: self)
+            segueToVCTripAdding()
         } else {
-            performSegue(withIdentifier: "segueToTripVC", sender: self)
+            segueToTripVC()
         }
     }
     
@@ -54,15 +54,6 @@ extension TripListTableViewController {
         let delete = deleteTrip(at: indexPath)
         
         return UISwipeActionsConfiguration(actions: [delete, editing])
-    }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "segueToTripVC" {
-            let tripVC = segue.destination as! TripTableViewController
-            if let indexPath = tableView.indexPathForSelectedRow {
-                tripVC.trip = trips[indexPath.row]
-            }
-        }
     }
 }
 

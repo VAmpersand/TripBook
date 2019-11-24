@@ -16,8 +16,7 @@ extension TripListTableViewController {
             let edditingVC = self.storyboard?.instantiateViewController(withIdentifier: "AddingTrip") as! AddTripViewController
             edditingVC.tripForEdditing = self.trips[indexPath.row]
             edditingVC.currentIndexPath = indexPath
-            self.present(edditingVC, animated:true, completion: nil)
-            
+            self.show(edditingVC, sender: self)
             completion(true)
         }
         button.backgroundColor = .gray
