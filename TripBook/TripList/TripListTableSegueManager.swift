@@ -14,14 +14,15 @@ extension TripListTableViewController {
         performSegue(withIdentifier: "segueToVCFirstEventAdding", sender: self)
     }
     
-    func segueToTripVC() {
-         performSegue(withIdentifier: "segueToTripVC", sender: self)
-    }
     
     @objc func segueToVCTripAdding() {
              performSegue(withIdentifier: "segueToVCTripAdding", sender: self)
          }
     
+    
+    func segueToTripVC() {
+        performSegue(withIdentifier: "segueToTripVC", sender: self)
+    }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "segueToTripVC" {

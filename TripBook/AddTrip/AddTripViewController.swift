@@ -6,33 +6,33 @@
 //  Copyright © 2019 Viktor. All rights reserved.
 //
 
-protocol ReloadTabelDelegate {
-    func reloadTable()
-}
+//protocol ReloadTabelDelegate {
+//    func reloadTable()
+//}
 
 import UIKit
 
 class AddTripViewController: UIViewController {
     
-    let tripListTVC = TripListTableViewController()
     
     @IBOutlet var imageAddTripVC: UIImageView!
-    
     @IBOutlet var countryTextField: UITextField!
-    
     @IBOutlet var saveButton: UIButton!
     @IBOutlet var startDateButton: UIButton!
     @IBOutlet var endDateButton: UIButton!
+    @IBOutlet var tripCompletedLabel: UILabel!
+    @IBOutlet var tripCompletedSwitch: UISwitch!
     
+    let tripListTVC = TripListTableViewController()
     let dateManager = DateManager()
     
-    var delegat: ReloadTabelDelegate?
+//    var delegat: ReloadTabelDelegate?
     
     var tempDate = Date()
     
     var newTrip = Trip()
     var tripForEdditing: Trip!
-    var currentIndexPath: IndexPath!
+    //    var currentIndexPath: IndexPath!
     
     
     override func viewDidLoad() {
@@ -59,6 +59,13 @@ class AddTripViewController: UIViewController {
         guard let tripName = countryTextField.text else { return }
         newTrip.tripName = tripName
         
+        if tripCompletedSwitch.isOn {
+            newTrip.tripCompleted = true
+        } else {
+            newTrip.tripCompleted = false
+        }
+        
+        
         if tripForEdditing == nil {
             DispatchQueue.main.async {
                 StorageManager.saveTrip(self.newTrip)
@@ -69,26 +76,16 @@ class AddTripViewController: UIViewController {
             }
         }
         
-        delegat?.reloadTable()
+        
+//        delegat?.reloadTable()
         
         self.viewDidLoad()
         self.viewWillAppear(true)
         
         self.navigationController?.popViewController(animated: true)
     }
+    
 }
 
 
-extension AddTripViewController {
-    
-    func setTitleButton(button: UIButton, date: Date) {
-        let date = dateManager.convertDateToStandartDateStr(date: date)
-        button.setTitle(date, for: .normal)
-    }
-    
-    func setTripParametrs(trip: Trip) {
-        countryTextField.text = trip.tripName
-        setTitleButton(button: endDateButton, date: trip.startTrip)
-        setTitleButton(button: startDateButton, date: trip.endTrip)
-    }
-}
+

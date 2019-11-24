@@ -40,8 +40,4 @@ extension TripListTableViewController {
         
         navigationController?.navigationBar.tintColor = .black
     }
-    
-    @objc func reloadTable() {
-        tableView.reloadData()
-    }
 }

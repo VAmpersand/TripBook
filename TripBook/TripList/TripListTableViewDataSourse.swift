@@ -42,7 +42,7 @@ extension TripListTableViewController {
         let trip = trips[indexPath.row]
         
         if trip.events.isEmpty {
-            segueToVCTripAdding()
+            segueToVCFirstEventAdding()
         } else {
             segueToTripVC()
         }

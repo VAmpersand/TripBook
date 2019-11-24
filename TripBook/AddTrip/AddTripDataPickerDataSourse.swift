@@ -17,6 +17,7 @@ extension AddTripViewController {
         let picker: UIDatePicker = UIDatePicker(frame: dataPickerFrame)
         
         picker.datePickerMode = .date
+        picker.minimumDate = Date()
         picker.addTarget(self, action: #selector(datePickerChange(datePicker:)), for: .valueChanged)
         
         return picker

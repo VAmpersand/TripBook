@@ -29,6 +29,7 @@ class StorageManager {
             trip.tripName = newTrip.tripName
             trip.startTrip = newTrip.startTrip
             trip.endTrip = newTrip.endTrip
+            trip.tripCompleted = newTrip.tripCompleted
         }
     }
 }
