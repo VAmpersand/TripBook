@@ -10,15 +10,11 @@ import UIKit
 
 extension AddTripViewController {
     
-    func setTitleButton(button: UIButton, date: Date) {
-        let date = dateManager.convertDateToStandartDateStr(date: date)
-        button.setTitle(date, for: .normal)
-    }
-    
     func setTripParametrsInView(trip: Trip) {
         countryTextField.text = trip.tripName
-        setTitleButton(button: endDateButton, date: trip.startTrip)
-        setTitleButton(button: startDateButton, date: trip.endTrip)
+
+        startDateTextField.text = dateManager.convertDateToStandartDateStr(date: trip.startTrip)
+        endDateTextField.text = dateManager.convertDateToStandartDateStr(date: trip.endTrip)
         
         if tripForEdditing == nil {
             titleLabel.text = "Create new trip"

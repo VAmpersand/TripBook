@@ -14,29 +14,35 @@ import UIKit
 
 class AddTripViewController: UIViewController {
     
-    
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet var imageAddTripVC: UIImageView!
     @IBOutlet var countryTextField: UITextField!
+    @IBOutlet weak var startDateTextField: UITextField!
+    @IBOutlet weak var endDateTextField: UITextField!
     @IBOutlet var saveButton: UIButton!
-    @IBOutlet var startDateButton: UIButton!
-    @IBOutlet var endDateButton: UIButton!
     @IBOutlet var tripCompletedLabel: UILabel!
     @IBOutlet var tripCompletedSwitch: UISwitch!
     
     let tripListTVC = TripListTableViewController()
     let dateManager = DateManager()
     
-//    var delegat: ReloadTabelDelegate?
+    //    var delegat: ReloadTabelDelegate?
     
-    var tempDate = Date()
-    
+//    var tempDate = Date()
     var newTrip = Trip()
     var tripForEdditing: Trip!
-
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        startDateTextField.inputView = setStartDatePicker()
+        startDateTextField.inputAccessoryView = setToolBar()
+        
+        endDateTextField.inputView = setEndDatePicker()
+        endDateTextField.inputAccessoryView = setToolBar()
+        
+        countryTextField.inputAccessoryView = setToolBar()
         
         if tripForEdditing == nil {
             setTripParametrsInView(trip: newTrip)
@@ -45,13 +51,6 @@ class AddTripViewController: UIViewController {
         }
     }
     
-    @IBAction func setStartDate(_ sender: Any) {
-        showChoosingDateAlert(kindOfDate: .startDate)
-    }
-    
-    @IBAction func setEndDate(_ sender: Any) {
-        showChoosingDateAlert(kindOfDate: .endDate)
-    }
     
     @IBAction func saveTrip(_ sender: Any) {
         guard let tripName = countryTextField.text else { return }
@@ -73,12 +72,13 @@ class AddTripViewController: UIViewController {
             }
         }
         
-//        delegat?.reloadTable()
-        
-        self.viewDidLoad()
-        self.viewWillAppear(true)
+        //        delegat?.reloadTable()
         
         self.dismiss(animated: true, completion: nil)
+        
+        self.viewWillAppear(true)
+        self.viewDidLoad()
+        
     }
     
 }
