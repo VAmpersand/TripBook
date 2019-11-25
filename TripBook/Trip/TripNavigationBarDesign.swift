@@ -34,8 +34,5 @@ extension TripTableViewController {
         navigationController?.navigationBar.tintColor = .black
     }
     
-    @objc func addingEvent() {
-        performSegue(withIdentifier: "segueToVCEventAdding", sender: self)
-    }
 }
 

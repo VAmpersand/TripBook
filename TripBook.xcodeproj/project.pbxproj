@@ -18,7 +18,6 @@
 		7736191223621DCA00AE271D /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7736191123621DCA00AE271D /* StorageManager.swift */; };
 		773619142362359E00AE271D /* TripListTableViewDataSourse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 773619132362359E00AE271D /* TripListTableViewDataSourse.swift */; };
 		774BC881238A8F0900BFC226 /* TripListTableSegueManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 774BC880238A8F0900BFC226 /* TripListTableSegueManager.swift */; };
-		774BC883238A908500BFC226 /* AddTripNavigationBarDesign.swift in Sources */ = {isa = PBXBuildFile; fileRef = 774BC882238A908500BFC226 /* AddTripNavigationBarDesign.swift */; };
 		774E36B6238B3AAE00DC4624 /* AddTripViewSetupOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 774E36B5238B3AAE00DC4624 /* AddTripViewSetupOptions.swift */; };
 		775F545A2385CB12005F9AB2 /* TripListTableViewTrailingSwipeAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 775F54592385CB12005F9AB2 /* TripListTableViewTrailingSwipeAction.swift */; };
 		7761A58D236A05AF0067C209 /* TripListNavigationBarDesign.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7761A58C236A05AF0067C209 /* TripListNavigationBarDesign.swift */; };
@@ -29,6 +28,7 @@
 		7761A59A236CC46D0067C209 /* TripTableViewDataSourse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7761A599236CC46D0067C209 /* TripTableViewDataSourse.swift */; };
 		7761A59E236F0D250067C209 /* AddEventPickerViewDataSourse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7761A59D236F0D250067C209 /* AddEventPickerViewDataSourse.swift */; };
 		7761A5A0236F10DD0067C209 /* EventTypeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7761A59F236F10DD0067C209 /* EventTypeModel.swift */; };
+		77CDE748238BD65C00802DF3 /* TripTableSegueManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77CDE747238BD65C00802DF3 /* TripTableSegueManager.swift */; };
 		77D418BF236F52C90095CD98 /* AddTripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77D418BE236F52C90095CD98 /* AddTripViewController.swift */; };
 		77D418C523708FA90095CD98 /* AddEventNavigationBarDesign.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77D418C423708FA90095CD98 /* AddEventNavigationBarDesign.swift */; };
 		77D418C72371E5A30095CD98 /* AddTripPickerViewDataSourse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77D418C62371E5A30095CD98 /* AddTripPickerViewDataSourse.swift */; };
@@ -55,7 +55,6 @@
 		7736191123621DCA00AE271D /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
 		773619132362359E00AE271D /* TripListTableViewDataSourse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripListTableViewDataSourse.swift; sourceTree = "<group>"; };
 		774BC880238A8F0900BFC226 /* TripListTableSegueManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripListTableSegueManager.swift; sourceTree = "<group>"; };
-		774BC882238A908500BFC226 /* AddTripNavigationBarDesign.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddTripNavigationBarDesign.swift; sourceTree = "<group>"; };
 		774E36B5238B3AAE00DC4624 /* AddTripViewSetupOptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTripViewSetupOptions.swift; sourceTree = "<group>"; };
 		775F54592385CB12005F9AB2 /* TripListTableViewTrailingSwipeAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripListTableViewTrailingSwipeAction.swift; sourceTree = "<group>"; };
 		7761A58C236A05AF0067C209 /* TripListNavigationBarDesign.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripListNavigationBarDesign.swift; sourceTree = "<group>"; };
@@ -66,6 +65,7 @@
 		7761A599236CC46D0067C209 /* TripTableViewDataSourse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripTableViewDataSourse.swift; sourceTree = "<group>"; };
 		7761A59D236F0D250067C209 /* AddEventPickerViewDataSourse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEventPickerViewDataSourse.swift; sourceTree = "<group>"; };
 		7761A59F236F10DD0067C209 /* EventTypeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = EventTypeModel.swift; path = /Users/viktor/Developer/TripBook/TripBook/Models/EventTypeModel.swift; sourceTree = "<absolute>"; };
+		77CDE747238BD65C00802DF3 /* TripTableSegueManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripTableSegueManager.swift; sourceTree = "<group>"; };
 		77D418BE236F52C90095CD98 /* AddTripViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTripViewController.swift; sourceTree = "<group>"; };
 		77D418C423708FA90095CD98 /* AddEventNavigationBarDesign.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEventNavigationBarDesign.swift; sourceTree = "<group>"; };
 		77D418C62371E5A30095CD98 /* AddTripPickerViewDataSourse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTripPickerViewDataSourse.swift; sourceTree = "<group>"; };
@@ -163,6 +163,7 @@
 			children = (
 				7761A590236B80900067C209 /* TripTableViewController.swift */,
 				7761A599236CC46D0067C209 /* TripTableViewDataSourse.swift */,
+				77CDE747238BD65C00802DF3 /* TripTableSegueManager.swift */,
 				7761A592236C29C90067C209 /* TripNavigationBarDesign.swift */,
 			);
 			path = Trip;
@@ -195,7 +196,6 @@
 				77D418C82371E7CB0095CD98 /* AddTripAlertContoller.swift */,
 				774E36B5238B3AAE00DC4624 /* AddTripViewSetupOptions.swift */,
 				77D418D12373447A0095CD98 /* AddTripDataPickerDataSourse.swift */,
-				774BC882238A908500BFC226 /* AddTripNavigationBarDesign.swift */,
 			);
 			path = AddTrip;
 			sourceTree = "<group>";
@@ -338,7 +338,6 @@
 				77D418CE237202000095CD98 /* UIButtonExtension.swift in Sources */,
 				7761A59E236F0D250067C209 /* AddEventPickerViewDataSourse.swift in Sources */,
 				7736190E235F79C100AE271D /* TripListModel.swift in Sources */,
-				774BC883238A908500BFC226 /* AddTripNavigationBarDesign.swift in Sources */,
 				774E36B6238B3AAE00DC4624 /* AddTripViewSetupOptions.swift in Sources */,
 				77EB954E23887B62003BFFC6 /* TableUpdateManager.swift in Sources */,
 				7761A58F236B780C0067C209 /* AddEventViewController.swift in Sources */,
@@ -347,6 +346,7 @@
 				773619142362359E00AE271D /* TripListTableViewDataSourse.swift in Sources */,
 				7736191223621DCA00AE271D /* StorageManager.swift in Sources */,
 				77361910235F7E5E00AE271D /* EventModel.swift in Sources */,
+				77CDE748238BD65C00802DF3 /* TripTableSegueManager.swift in Sources */,
 				775F545A2385CB12005F9AB2 /* TripListTableViewTrailingSwipeAction.swift in Sources */,
 				7761A59A236CC46D0067C209 /* TripTableViewDataSourse.swift in Sources */,
 				77D418C92371E7CB0095CD98 /* AddTripAlertContoller.swift in Sources */,

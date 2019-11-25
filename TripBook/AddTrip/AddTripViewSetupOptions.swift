@@ -15,15 +15,19 @@ extension AddTripViewController {
         button.setTitle(date, for: .normal)
     }
     
-    func setTripParametrs(trip: Trip) {
+    func setTripParametrsInView(trip: Trip) {
         countryTextField.text = trip.tripName
         setTitleButton(button: endDateButton, date: trip.startTrip)
         setTitleButton(button: startDateButton, date: trip.endTrip)
         
         if tripForEdditing == nil {
+            titleLabel.text = "Create new trip"
+            
             tripCompletedSwitch.isHidden = true
             tripCompletedLabel.isHidden = true
         } else {
+            titleLabel.text = "Edditing trip"
+            
             if trip.tripCompleted == true {
                 tripCompletedSwitch.setOn(true, animated: false)
             } else {

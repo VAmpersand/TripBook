@@ -15,6 +15,7 @@ import UIKit
 class AddTripViewController: UIViewController {
     
     
+    @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet var imageAddTripVC: UIImageView!
     @IBOutlet var countryTextField: UITextField!
     @IBOutlet var saveButton: UIButton!
@@ -32,18 +33,15 @@ class AddTripViewController: UIViewController {
     
     var newTrip = Trip()
     var tripForEdditing: Trip!
-    //    var currentIndexPath: IndexPath!
-    
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        setupView()
-        
         if tripForEdditing == nil {
-            setTripParametrs(trip: newTrip)
+            setTripParametrsInView(trip: newTrip)
         } else {
-            setTripParametrs(trip: tripForEdditing)
+            setTripParametrsInView(trip: tripForEdditing)
         }
     }
     
@@ -65,7 +63,6 @@ class AddTripViewController: UIViewController {
             newTrip.tripCompleted = false
         }
         
-        
         if tripForEdditing == nil {
             DispatchQueue.main.async {
                 StorageManager.saveTrip(self.newTrip)
@@ -76,13 +73,12 @@ class AddTripViewController: UIViewController {
             }
         }
         
-        
 //        delegat?.reloadTable()
         
         self.viewDidLoad()
         self.viewWillAppear(true)
         
-        self.navigationController?.popViewController(animated: true)
+        self.dismiss(animated: true, completion: nil)
     }
     
 }

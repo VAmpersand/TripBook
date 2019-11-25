@@ -12,8 +12,6 @@ class TripTableViewController: UITableViewController {
     
     var trip: Trip!
     
-    var tripForAdditing: Trip!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -22,7 +20,7 @@ class TripTableViewController: UITableViewController {
     }
 
     func testPrint() {
-        guard let test = tripForAdditing else {
+        guard let test = trip else {
             print("Error2")
             return
         }

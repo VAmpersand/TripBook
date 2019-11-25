@@ -12,11 +12,11 @@
             <objects>
                 <viewController storyboardIdentifier="AddingTrip" id="PX6-oV-U0q" customClass="AddTripViewController" customModule="TripBook" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="R47-Oo-7ko">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="758"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="6vv-a9-CaG">
-                                <rect key="frame" x="107" y="195.66666666666663" width="252" height="390"/>
+                                <rect key="frame" x="107" y="155" width="252" height="390"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter a name for the trip:" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UZp-35-aLE">
                                         <rect key="frame" x="0.0" y="0.0" width="252" height="60"/>
@@ -28,13 +28,13 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Trip name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0Eh-qu-G6V">
-                                        <rect key="frame" x="0.0" y="68.000000000000028" width="252" height="34"/>
+                                        <rect key="frame" x="0.0" y="68" width="252" height="34"/>
                                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose the start date of the trip:" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lHm-dc-nKR">
-                                        <rect key="frame" x="0.0" y="110.00000000000003" width="252" height="60"/>
+                                        <rect key="frame" x="0.0" y="110" width="252" height="60"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="60" id="BvZ-bD-Klw"/>
                                         </constraints>
@@ -43,7 +43,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SYO-O4-OEj">
-                                        <rect key="frame" x="0.0" y="178.00000000000003" width="252" height="34"/>
+                                        <rect key="frame" x="0.0" y="178" width="252" height="34"/>
                                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="34" id="Xqg-In-OhQ"/>
@@ -66,7 +66,7 @@
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose the end date of the trip:" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bpT-i1-eFr">
-                                        <rect key="frame" x="0.0" y="220.00000000000003" width="252" height="59.999999999999972"/>
+                                        <rect key="frame" x="0.0" y="220" width="252" height="60"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="60" id="dmM-1D-eZa"/>
                                         </constraints>
@@ -109,10 +109,10 @@
                                 </subviews>
                             </stackView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="done" translatesAutoresizingMaskIntoConstraints="NO" id="664-UL-zmr">
-                                <rect key="frame" x="16" y="104" width="83" height="87"/>
+                                <rect key="frame" x="16" y="77" width="83" height="81.333333333333314"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rrE-gc-Lma">
-                                <rect key="frame" x="268" y="144" width="91" height="43"/>
+                                <rect key="frame" x="268" y="104" width="91" height="43"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="rrE-gc-Lma" secondAttribute="height" multiplier="91:43" id="3vi-b8-8co"/>
@@ -136,23 +136,35 @@
                                 </connections>
                             </button>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="k3Z-of-sGZ">
-                                <rect key="frame" x="299" y="540.33333333333337" width="51" height="31"/>
+                                <rect key="frame" x="299" y="446.33333333333331" width="51" height="31"/>
                             </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N3m-9L-EDW">
+                                <rect key="frame" x="16" y="20" width="343" height="42"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="42" id="tk6-Tg-OQh"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="32"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="rrE-gc-Lma" firstAttribute="top" secondItem="a6p-Bl-FkX" secondAttribute="top" constant="56" id="274-rY-3ID"/>
                             <constraint firstItem="664-UL-zmr" firstAttribute="width" secondItem="R47-Oo-7ko" secondAttribute="width" multiplier="0.221333" id="A1A-u2-f4P"/>
-                            <constraint firstItem="4Dt-f7-nK8" firstAttribute="centerY" secondItem="k3Z-of-sGZ" secondAttribute="centerY" id="Cbs-jD-PhO"/>
+                            <constraint firstItem="4Dt-f7-nK8" firstAttribute="centerY" secondItem="k3Z-of-sGZ" secondAttribute="centerY" constant="53.166666666666686" id="Cbs-jD-PhO"/>
                             <constraint firstItem="a6p-Bl-FkX" firstAttribute="trailing" secondItem="rrE-gc-Lma" secondAttribute="trailing" constant="16" id="N0A-tA-83E"/>
                             <constraint firstItem="664-UL-zmr" firstAttribute="leading" secondItem="a6p-Bl-FkX" secondAttribute="leading" constant="16" id="Qr3-lN-8ZM"/>
-                            <constraint firstItem="6vv-a9-CaG" firstAttribute="top" secondItem="664-UL-zmr" secondAttribute="bottom" constant="4.6666666666666856" id="Vty-Tz-Cph"/>
+                            <constraint firstItem="N3m-9L-EDW" firstAttribute="leading" secondItem="a6p-Bl-FkX" secondAttribute="leading" constant="16" id="TLW-IC-ijC"/>
+                            <constraint firstItem="664-UL-zmr" firstAttribute="top" secondItem="N3m-9L-EDW" secondAttribute="bottom" constant="15" id="UVE-Mi-bej"/>
+                            <constraint firstItem="6vv-a9-CaG" firstAttribute="top" secondItem="664-UL-zmr" secondAttribute="bottom" constant="-3.3333333333333144" id="Vty-Tz-Cph"/>
+                            <constraint firstItem="N3m-9L-EDW" firstAttribute="top" secondItem="a6p-Bl-FkX" secondAttribute="top" constant="20" id="Zxs-rI-LQm"/>
                             <constraint firstItem="k3Z-of-sGZ" firstAttribute="leading" secondItem="4Dt-f7-nK8" secondAttribute="trailing" constant="-60" id="eJ0-7z-Sdl"/>
+                            <constraint firstItem="rrE-gc-Lma" firstAttribute="top" secondItem="N3m-9L-EDW" secondAttribute="bottom" constant="42" id="elE-DS-ijS"/>
                             <constraint firstItem="rrE-gc-Lma" firstAttribute="leading" secondItem="a6p-Bl-FkX" secondAttribute="leading" constant="268" id="fis-oZ-xfr"/>
                             <constraint firstItem="6vv-a9-CaG" firstAttribute="trailing" secondItem="a6p-Bl-FkX" secondAttribute="trailing" constant="-16" id="fki-vm-nw1"/>
                             <constraint firstItem="6vv-a9-CaG" firstAttribute="leading" secondItem="664-UL-zmr" secondAttribute="trailing" constant="8" id="kfY-Ex-6EJ"/>
+                            <constraint firstItem="a6p-Bl-FkX" firstAttribute="trailing" secondItem="N3m-9L-EDW" secondAttribute="trailing" constant="16" id="kif-7V-fg5"/>
                             <constraint firstItem="664-UL-zmr" firstAttribute="height" secondItem="R47-Oo-7ko" secondAttribute="height" multiplier="0.107143" id="lXS-P4-aKq"/>
-                            <constraint firstItem="664-UL-zmr" firstAttribute="top" secondItem="a6p-Bl-FkX" secondAttribute="top" constant="16" id="lwI-ac-P86"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="a6p-Bl-FkX"/>
                     </view>
@@ -163,6 +175,7 @@
                         <outlet property="imageAddTripVC" destination="664-UL-zmr" id="ywg-jA-9Gw"/>
                         <outlet property="saveButton" destination="rrE-gc-Lma" id="wzm-Nf-4aZ"/>
                         <outlet property="startDateButton" destination="SYO-O4-OEj" id="hOv-Vw-fWs"/>
+                        <outlet property="titleLabel" destination="N3m-9L-EDW" id="v2h-hs-eXL"/>
                         <outlet property="tripCompletedLabel" destination="4Dt-f7-nK8" id="Ync-eP-t89"/>
                         <outlet property="tripCompletedSwitch" destination="k3Z-of-sGZ" id="UDe-V6-2eU"/>
                     </connections>
@@ -218,7 +231,7 @@
                     <connections>
                         <segue destination="jxs-If-TDE" kind="show" identifier="segueToVCFirstEventAdding" id="GZy-SY-Z98"/>
                         <segue destination="9Bh-yM-FL6" kind="show" identifier="segueToTripVC" id="orQ-rA-wDf"/>
-                        <segue destination="PX6-oV-U0q" kind="show" identifier="segueToVCTripAdding" id="c3G-A2-8hZ"/>
+                        <segue destination="PX6-oV-U0q" kind="presentation" identifier="segueToVCTripAdding" id="c3G-A2-8hZ"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wyk-vt-LU5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
