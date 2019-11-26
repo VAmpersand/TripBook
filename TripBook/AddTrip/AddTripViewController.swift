@@ -14,11 +14,11 @@ import UIKit
 
 class AddTripViewController: UIViewController {
     
-    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet var titleLabel: UILabel!
     @IBOutlet var imageAddTripVC: UIImageView!
     @IBOutlet var countryTextField: UITextField!
-    @IBOutlet weak var startDateTextField: UITextField!
-    @IBOutlet weak var endDateTextField: UITextField!
+    @IBOutlet var startDateTextField: UITextField!
+    @IBOutlet var endDateTextField: UITextField!
     @IBOutlet var saveButton: UIButton!
     @IBOutlet var tripCompletedLabel: UILabel!
     @IBOutlet var tripCompletedSwitch: UISwitch!
@@ -28,7 +28,7 @@ class AddTripViewController: UIViewController {
     
     //    var delegat: ReloadTabelDelegate?
     
-//    var tempDate = Date()
+    var tempDate = Date()
     var newTrip = Trip()
     var tripForEdditing: Trip!
     
@@ -44,31 +44,25 @@ class AddTripViewController: UIViewController {
         
         countryTextField.inputAccessoryView = setToolBar()
         
-        if tripForEdditing == nil {
-            setTripParametrsInView(trip: newTrip)
+        if let trip = tripForEdditing {
+            setTripParametrsInView(trip: trip)
         } else {
-            setTripParametrsInView(trip: tripForEdditing)
+            setTripParametrsInView(trip: newTrip)
         }
     }
     
     
     @IBAction func saveTrip(_ sender: Any) {
-        guard let tripName = countryTextField.text else { return }
-        newTrip.tripName = tripName
         
-        if tripCompletedSwitch.isOn {
-            newTrip.tripCompleted = true
-        } else {
-            newTrip.tripCompleted = false
-        }
+        checkData()
         
-        if tripForEdditing == nil {
+        if let trip = tripForEdditing {
             DispatchQueue.main.async {
-                StorageManager.saveTrip(self.newTrip)
+                StorageManager.editTrip(trip, self.newTrip)
             }
         } else {
             DispatchQueue.main.async {
-                StorageManager.editTrip(self.tripForEdditing, self.newTrip)
+                StorageManager.saveTrip(self.newTrip)
             }
         }
         
@@ -76,11 +70,14 @@ class AddTripViewController: UIViewController {
         
         self.dismiss(animated: true, completion: nil)
         
-        self.viewWillAppear(true)
         self.viewDidLoad()
-        
     }
     
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+            super.touchesBegan(touches, with: event)
+            
+            view.endEditing(true)
+        }
 }
 
 

@@ -27,6 +27,7 @@ extension AddTripViewController {
     @objc func startDatePickerChange(datePicker: UIDatePicker) {
         startDateTextField.text = dateManager.convertDateToStandartDateStr(date: datePicker.date)
         newTrip.startTrip = datePicker.date
+        tempDate = datePicker.date
     }
     
     
@@ -46,6 +47,7 @@ extension AddTripViewController {
     @objc func endDatePickerChange(datePicker: UIDatePicker) {
         endDateTextField.text = dateManager.convertDateToStandartDateStr(date: datePicker.date)
         newTrip.endTrip = datePicker.date
+        tempDate = datePicker.date
     }
     
     
