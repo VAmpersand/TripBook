@@ -31,9 +31,5 @@ extension AddTripViewController {
             }
         }
     }
-    
-    
-    
- 
 }
 

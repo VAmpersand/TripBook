@@ -13,8 +13,7 @@ extension AddTripViewController {
     
     func setStartDatePicker() -> UIDatePicker {
         
-        let dataPickerFrame: CGRect = CGRect(x: 10, y: 35, width: 300, height: 300)
-        let picker = UIDatePicker(frame: dataPickerFrame)
+        let picker = UIDatePicker()
         
         picker.datePickerMode = .date
         picker.minimumDate = Date()
@@ -30,11 +29,9 @@ extension AddTripViewController {
         tempDate = datePicker.date
     }
     
-    
     func setEndDatePicker() -> UIDatePicker {
         
-        let dataPickerFrame: CGRect = CGRect(x: 10, y: 35, width: 300, height: 300)
-        let picker = UIDatePicker(frame: dataPickerFrame)
+        let picker = UIDatePicker()
         
         picker.datePickerMode = .date
         picker.minimumDate = Date()

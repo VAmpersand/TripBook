@@ -141,7 +141,7 @@
                         <outlet property="imageAddTripVC" destination="664-UL-zmr" id="ywg-jA-9Gw"/>
                         <outlet property="saveButton" destination="rrE-gc-Lma" id="wzm-Nf-4aZ"/>
                         <outlet property="startDateTextField" destination="Sqj-YP-2kx" id="09V-qs-y08"/>
-                        <outlet property="titleLabel" destination="N3m-9L-EDW" id="v2h-hs-eXL"/>
+                        <outlet property="titleLabel" destination="N3m-9L-EDW" id="CKV-7k-q6j"/>
                         <outlet property="tripCompletedLabel" destination="4Dt-f7-nK8" id="Ync-eP-t89"/>
                         <outlet property="tripCompletedSwitch" destination="k3Z-of-sGZ" id="UDe-V6-2eU"/>
                     </connections>

@@ -8,8 +8,9 @@
 import UIKit
 import RealmSwift
 
-class TripListTableViewController: UITableViewController/*, ReloadTabelDelegate */ {
+class TripListTableViewController: UITableViewController {
     
+    var addTripTVC: AddTripViewController?
     
     let cellID = "cell"
     
@@ -38,12 +39,21 @@ class TripListTableViewController: UITableViewController/*, ReloadTabelDelegate 
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        addTripTVC = AddTripViewController()
+        addTripTVC?.delegat = self
+        
         setupView()
         setTestTrip()
         trips = realm.objects(Trip.self)
+        
     }
+}
+
+extension TripListTableViewController: ReloadTabelDelegate {
     
     @objc func reloadTable() {
-         tableView.reloadData()
-     }
+        tableView.reloadData()
+        print("Resive data")
+    }
+    
 }
