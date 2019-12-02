@@ -15,11 +15,64 @@ extension AddEventViewController {
         tripListTableView.register(UITableViewCell.self, forCellReuseIdentifier: cellID)
         tripListTableView.layer.cornerRadius = 10
         tripListTableView.backgroundColor = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
+    }
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
         
+        var numberOfSections = 1
+        
+        switch eventType {
+        case "Apartment reservation":
+            numberOfSections = reservation.count
+        case "Hotel room reservation":
+            numberOfSections = reservation.count
+        case "Transfer":
+            numberOfSections = transfer.count
+        case "Car ride":
+            numberOfSections = carRide.count
+        case "Flight":
+            numberOfSections = enotherTypeRide.count
+        case "Bus ride":
+            numberOfSections = enotherTypeRide.count
+        case "Train ride":
+            numberOfSections = enotherTypeRide.count
+        default:
+            break
+        }
+        return numberOfSections
+    }
+    
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+  
+        var titleInsection = [""]
+        
+        switch eventType {
+        case "Apartment reservation":
+            titleInsection = reservation
+        case "Hotel room reservation":
+            titleInsection = reservation
+        case "Transfer":
+            titleInsection = transfer
+        case "Car ride":
+            titleInsection = carRide
+        case "Flight":
+            titleInsection = enotherTypeRide
+        case "Bus ride":
+            titleInsection = enotherTypeRide
+        case "Train ride":
+            titleInsection = enotherTypeRide
+        default:
+            break
+        }
+        return titleInsection[section]
+    }
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 45
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return 1
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -55,7 +108,7 @@ extension AddEventViewController {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print("Test")
+        tableView.deselectRow(at: indexPath, animated: true)
     }
-    
 }
 

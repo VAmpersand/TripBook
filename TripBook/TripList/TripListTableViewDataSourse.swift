@@ -46,6 +46,8 @@ extension TripListTableViewController {
         } else {
             segueToTripVC()
         }
+        
+        tableView.deselectRow(at: indexPath, animated: true)
     }
     
     override func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {

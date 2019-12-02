@@ -37,5 +37,9 @@ extension TripTableViewController {
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         66
     }
+    
+    func tableView(tableView: UITableView, didSelectRow indexPath: IndexPath){
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
 }
 

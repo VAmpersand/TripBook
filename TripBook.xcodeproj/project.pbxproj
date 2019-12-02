@@ -33,7 +33,6 @@
 		77CDE74A238C809B00802DF3 /* AddTripDataEditCheck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77CDE749238C809B00802DF3 /* AddTripDataEditCheck.swift */; };
 		77D418BF236F52C90095CD98 /* AddTripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77D418BE236F52C90095CD98 /* AddTripViewController.swift */; };
 		77D418C523708FA90095CD98 /* AddEventNavigationBarDesign.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77D418C423708FA90095CD98 /* AddEventNavigationBarDesign.swift */; };
-		77D418C72371E5A30095CD98 /* AddTripPickerViewDataSourse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77D418C62371E5A30095CD98 /* AddTripPickerViewDataSourse.swift */; };
 		77D418C92371E7CB0095CD98 /* AddTripAlertContoller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77D418C82371E7CB0095CD98 /* AddTripAlertContoller.swift */; };
 		77D418CE237202000095CD98 /* UIButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77D418CD237202000095CD98 /* UIButtonExtension.swift */; };
 		77D418D22373447A0095CD98 /* AddTripDataPickerDataSourse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77D418D12373447A0095CD98 /* AddTripDataPickerDataSourse.swift */; };
@@ -72,7 +71,6 @@
 		77CDE749238C809B00802DF3 /* AddTripDataEditCheck.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTripDataEditCheck.swift; sourceTree = "<group>"; };
 		77D418BE236F52C90095CD98 /* AddTripViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTripViewController.swift; sourceTree = "<group>"; };
 		77D418C423708FA90095CD98 /* AddEventNavigationBarDesign.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEventNavigationBarDesign.swift; sourceTree = "<group>"; };
-		77D418C62371E5A30095CD98 /* AddTripPickerViewDataSourse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTripPickerViewDataSourse.swift; sourceTree = "<group>"; };
 		77D418C82371E7CB0095CD98 /* AddTripAlertContoller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTripAlertContoller.swift; sourceTree = "<group>"; };
 		77D418CD237202000095CD98 /* UIButtonExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonExtension.swift; sourceTree = "<group>"; };
 		77D418D12373447A0095CD98 /* AddTripDataPickerDataSourse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTripDataPickerDataSourse.swift; sourceTree = "<group>"; };
@@ -142,7 +140,6 @@
 				7761A5A4236F1A650067C209 /* AddTrip */,
 				7761A5A1236F14920067C209 /* AddEvent */,
 				773618FD235F6EDF00AE271D /* Main.storyboard */,
-				77D418C62371E5A30095CD98 /* AddTripPickerViewDataSourse.swift */,
 				77361900235F6EE000AE271D /* Assets.xcassets */,
 				77361902235F6EE000AE271D /* LaunchScreen.storyboard */,
 				77361905235F6EE000AE271D /* Info.plist */,
@@ -334,7 +331,6 @@
 			files = (
 				77175CEC23955D6B00E50AAD /* AddEventTableViewDataSourse.swift in Sources */,
 				77D418D42373524D0095CD98 /* DateManager.swift in Sources */,
-				77D418C72371E5A30095CD98 /* AddTripPickerViewDataSourse.swift in Sources */,
 				77D418BF236F52C90095CD98 /* AddTripViewController.swift in Sources */,
 				7761A591236B80900067C209 /* TripTableViewController.swift in Sources */,
 				7736190C235F72A100AE271D /* TripListTableViewController.swift in Sources */,
