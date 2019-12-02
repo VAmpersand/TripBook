@@ -31,6 +31,5 @@ extension AddEventViewController: UIPickerViewDelegate, UIPickerViewDataSource {
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         eventType = eventTypes[row]
         tripListTableView.reloadData()
-        print(eventType)
     }
 }

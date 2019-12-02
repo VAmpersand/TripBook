@@ -9,14 +9,7 @@
 import UIKit
 
 extension AddEventViewController {
-    
-    func setAtributesTableView() {
-        tripListTableView.separatorStyle = .none
-        tripListTableView.register(UITableViewCell.self, forCellReuseIdentifier: cellID)
-        tripListTableView.layer.cornerRadius = 10
-        tripListTableView.backgroundColor = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
-    }
-    
+
     func numberOfSections(in tableView: UITableView) -> Int {
         
         var numberOfSections = 1
@@ -79,25 +72,25 @@ extension AddEventViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellID, for: indexPath)
         
         cell.backgroundColor = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
-        
-        switch eventType {
-        case "Apartment reservation":
-            cell.textLabel?.text = "Apartment reservation"
-        case "Hotel room reservation":
-            cell.textLabel?.text = "Hotel room reservation"
-        case "Transfer":
-            cell.textLabel?.text = "Transfer"
-        case "Car ride":
-            cell.textLabel?.text = "Car ride"
-        case "Flight":
-            cell.textLabel?.text = "Flight"
-        case "Bus ride":
-            cell.textLabel?.text = "Bus ride"
-        case "Train ride":
-            cell.textLabel?.text = "Train ride"
-        default:
-            break
-        }
+//        
+//        switch eventType {
+//        case "Apartment reservation":
+//            cell.textLabel?.text = "Apartment reservation"
+//        case "Hotel room reservation":
+//            cell.textLabel?.text = "Hotel room reservation"
+//        case "Transfer":
+//            cell.textLabel?.text = "Transfer"
+//        case "Car ride":
+//            cell.textLabel?.text = "Car ride"
+//        case "Flight":
+//            cell.textLabel?.text = "Flight"
+//        case "Bus ride":
+//            cell.textLabel?.text = "Bus ride"
+//        case "Train ride":
+//            cell.textLabel?.text = "Train ride"
+//        default:
+//            break
+//        }
 
         return cell
     }
@@ -107,7 +100,6 @@ extension AddEventViewController {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("Test")
         tableView.deselectRow(at: indexPath, animated: true)
     }
 }

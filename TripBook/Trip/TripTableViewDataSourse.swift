@@ -38,7 +38,7 @@ extension TripTableViewController {
         66
     }
     
-    func tableView(tableView: UITableView, didSelectRow indexPath: IndexPath){
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
     }
 }
