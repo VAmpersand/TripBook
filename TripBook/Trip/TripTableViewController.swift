@@ -10,6 +10,7 @@ import UIKit
 
 class TripTableViewController: UITableViewController {
     
+    let cellID = "eventCell"
     var trip: Trip!
     
     override func viewDidLoad() {
@@ -17,6 +18,7 @@ class TripTableViewController: UITableViewController {
         
         setupNavigationBar()
         testPrint()
+        tableView.separatorStyle = .none
     }
 
     func testPrint() {

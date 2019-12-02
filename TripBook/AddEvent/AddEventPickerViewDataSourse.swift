@@ -8,7 +8,12 @@
 
 import UIKit
 
-extension AddEventViewController {
+extension AddEventViewController: UIPickerViewDelegate, UIPickerViewDataSource {
+    
+    func setAtributePickerView() {
+        choosingTypeEventPicker.backgroundColor = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
+        choosingTypeEventPicker.layer.cornerRadius = 10
+    }
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
@@ -24,23 +29,8 @@ extension AddEventViewController {
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        switch row {
-        case 0:
-            print("Apartment reservation")
-        case 1:
-            print("Hotel room reservation")
-        case 2:
-            print("Transfer")
-        case 3:
-            print("Car ride")
-        case 4:
-            print("Flight")
-        case 5:
-            print("Bus ride")
-        case 6:
-            print("Train ride")
-        default:
-            break
-        }
+        eventType = eventTypes[row]
+        tripListTableView.reloadData()
+        print(eventType)
     }
 }

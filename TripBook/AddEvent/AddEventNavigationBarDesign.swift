@@ -11,7 +11,7 @@ import UIKit
 extension AddEventViewController {
     
     func setupView() {
-          view.backgroundColor = .white
+        view.backgroundColor = .white
           setupNavigationBar()
       }
     

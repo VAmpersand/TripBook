@@ -261,29 +261,38 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wVR-Zc-GVG">
-                                <rect key="frame" x="20" y="93" width="335" height="65"/>
+                                <rect key="frame" x="16" y="93" width="343" height="77"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="65" id="DfS-hV-HoB"/>
+                                    <constraint firstAttribute="height" constant="77" id="DfS-hV-HoB"/>
                                 </constraints>
                             </pickerView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="8r0-J7-bqA">
+                                <rect key="frame" x="16" y="178" width="343" height="581"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="S2a-h8-HWF" firstAttribute="bottom" relation="lessThanOrEqual" secondItem="wVR-Zc-GVG" secondAttribute="bottom" constant="709" id="5gk-Z2-t5e"/>
                             <constraint firstItem="wVR-Zc-GVG" firstAttribute="top" secondItem="S2a-h8-HWF" secondAttribute="top" constant="5" id="8GS-rw-aYu"/>
-                            <constraint firstItem="wVR-Zc-GVG" firstAttribute="leading" secondItem="S2a-h8-HWF" secondAttribute="leading" constant="20" id="pvN-jm-Wjz"/>
-                            <constraint firstItem="S2a-h8-HWF" firstAttribute="trailing" secondItem="wVR-Zc-GVG" secondAttribute="trailing" constant="20" id="saW-zw-cfd"/>
+                            <constraint firstItem="8r0-J7-bqA" firstAttribute="top" secondItem="wVR-Zc-GVG" secondAttribute="bottom" constant="8" id="SXG-zj-Zq0"/>
+                            <constraint firstItem="S2a-h8-HWF" firstAttribute="trailing" secondItem="8r0-J7-bqA" secondAttribute="trailing" constant="16" id="aL4-U9-Frg"/>
+                            <constraint firstItem="8r0-J7-bqA" firstAttribute="leading" secondItem="S2a-h8-HWF" secondAttribute="leading" constant="16" id="hKA-NE-vow"/>
+                            <constraint firstItem="S2a-h8-HWF" firstAttribute="bottom" secondItem="8r0-J7-bqA" secondAttribute="bottom" constant="19" id="mVx-wo-dEr"/>
+                            <constraint firstItem="wVR-Zc-GVG" firstAttribute="leading" secondItem="S2a-h8-HWF" secondAttribute="leading" constant="16" id="pvN-jm-Wjz"/>
+                            <constraint firstItem="S2a-h8-HWF" firstAttribute="trailing" secondItem="wVR-Zc-GVG" secondAttribute="trailing" constant="16" id="saW-zw-cfd"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="S2a-h8-HWF"/>
                     </view>
                     <navigationItem key="navigationItem" id="pDD-bv-6Qu"/>
                     <connections>
-                        <outlet property="choosingEventTipe" destination="wVR-Zc-GVG" id="FJg-x0-dvg"/>
+                        <outlet property="choosingTypeEventPicker" destination="wVR-Zc-GVG" id="FJg-x0-dvg"/>
+                        <outlet property="tripListTableView" destination="8r0-J7-bqA" id="rjB-QW-dEY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Reb-6l-pSh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1736" y="680"/>
+            <point key="canvasLocation" x="1735.2" y="679.80295566502468"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="nVH-8q-wkq">

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		77175CEC23955D6B00E50AAD /* AddEventTableViewDataSourse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77175CEB23955D6B00E50AAD /* AddEventTableViewDataSourse.swift */; };
 		773618F8235F6EDF00AE271D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 773618F7235F6EDF00AE271D /* AppDelegate.swift */; };
 		773618FA235F6EDF00AE271D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 773618F9235F6EDF00AE271D /* SceneDelegate.swift */; };
 		773618FF235F6EDF00AE271D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 773618FD235F6EDF00AE271D /* Main.storyboard */; };
@@ -43,6 +44,7 @@
 
 /* Begin PBXFileReference section */
 		246DABF25B76C2FC55E38E6A /* Pods_TripBook.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TripBook.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		77175CEB23955D6B00E50AAD /* AddEventTableViewDataSourse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEventTableViewDataSourse.swift; sourceTree = "<group>"; };
 		773618F4235F6EDF00AE271D /* TripBook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TripBook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		773618F7235F6EDF00AE271D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		773618F9235F6EDF00AE271D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -185,8 +187,9 @@
 			isa = PBXGroup;
 			children = (
 				7761A58E236B780C0067C209 /* AddEventViewController.swift */,
-				77D418C423708FA90095CD98 /* AddEventNavigationBarDesign.swift */,
+				77175CEB23955D6B00E50AAD /* AddEventTableViewDataSourse.swift */,
 				7761A59D236F0D250067C209 /* AddEventPickerViewDataSourse.swift */,
+				77D418C423708FA90095CD98 /* AddEventNavigationBarDesign.swift */,
 			);
 			path = AddEvent;
 			sourceTree = "<group>";
@@ -329,6 +332,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				77175CEC23955D6B00E50AAD /* AddEventTableViewDataSourse.swift in Sources */,
 				77D418D42373524D0095CD98 /* DateManager.swift in Sources */,
 				77D418C72371E5A30095CD98 /* AddTripPickerViewDataSourse.swift in Sources */,
 				77D418BF236F52C90095CD98 /* AddTripViewController.swift in Sources */,

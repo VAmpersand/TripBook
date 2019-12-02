@@ -8,17 +8,27 @@
 
 import UIKit
 
-class AddEventViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
+class AddEventViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-    @IBOutlet var choosingEventTipe: UIPickerView!
+    @IBOutlet var tripListTableView: UITableView!
+    @IBOutlet var choosingTypeEventPicker: UIPickerView!
+    
+    let cellID = "addEventCell"
+    
+    var eventType = "Apartment reservation"
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        choosingEventTipe.delegate = self
-        choosingEventTipe.dataSource = self
-        setupView()
+        choosingTypeEventPicker.delegate = self
+        choosingTypeEventPicker.dataSource = self
         
+        tripListTableView.delegate = self
+        tripListTableView.dataSource = self
+        
+        setupView()
+        setAtributesTableView()
+        setAtributePickerView()
     }
 
 }

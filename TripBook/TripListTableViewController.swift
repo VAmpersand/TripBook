@@ -45,7 +45,7 @@ class TripListTableViewController: UITableViewController {
         setupView()
         setTestTrip()
         trips = realm.objects(Trip.self)
-        
+        tableView.separatorStyle = .none
     }
 }
 
